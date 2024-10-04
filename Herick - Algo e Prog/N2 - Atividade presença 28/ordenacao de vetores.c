@@ -1,7 +1,7 @@
 //
 // Created by joaop on 04/10/2024.
 //
-//Em C, utilizando o método bolha ordene de forma decrescente 10 inseridos pelo usuário.
+//Em C, utilizando o metodo bolha ordene de forma decrescente 10 inseridos pelo usuário.
 
 #include <stdio.h>
 
