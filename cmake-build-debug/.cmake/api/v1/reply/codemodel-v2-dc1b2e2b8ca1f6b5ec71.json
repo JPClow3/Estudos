@@ -1,0 +1,141 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.29"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Estudos",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "1c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-1c-Debug-88b5b544b7ddbf386e34.json",
+					"name" : "1c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "2c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-2c-Debug-1f4bf5ca0532ee37e416.json",
+					"name" : "2c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "3c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-3c-Debug-016c906089a2c3f67ff5.json",
+					"name" : "3c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "4c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-4c-Debug-8403a8f377923b3d8ccc.json",
+					"name" : "4c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "5c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-5c-Debug-aad401db250617a80fff.json",
+					"name" : "5c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Bubble_Sort_Array::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Bubble_Sort_Array-Debug-68a8464e1e756ab07486.json",
+					"name" : "Bubble_Sort_Array",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Bubble_Sort_Vetor::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Bubble_Sort_Vetor-Debug-1c3884c151b2e186911e.json",
+					"name" : "Bubble_Sort_Vetor",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Matriz_Numeros_diagonais::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Matriz_Numeros_diagonais-Debug-c23f69bcc0cea096acb6.json",
+					"name" : "Matriz_Numeros_diagonais",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Ordenacao_de_vetores_1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Ordenacao_de_vetores_1-Debug-f7d4a203ecf0bb5a8d20.json",
+					"name" : "Ordenacao_de_vetores_1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ordenacao_de_vetores::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ordenacao_de_vetores-Debug-5f4f669f286123e9a685.json",
+					"name" : "ordenacao_de_vetores",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/lives/Documents/Clion/cmake-build-debug",
+		"source" : "C:/Users/lives/Documents/Clion"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
