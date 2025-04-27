@@ -1,0 +1,141 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.29"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Estudos",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "1c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-1c-Debug-5ee8afd97626e1746849.json",
+					"name" : "1c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "2c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-2c-Debug-721d557b767b593660b1.json",
+					"name" : "2c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "3c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-3c-Debug-ece25191c93641432eed.json",
+					"name" : "3c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "4c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-4c-Debug-046bdfb2568c0740e082.json",
+					"name" : "4c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "5c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-5c-Debug-8382986d68336d4be215.json",
+					"name" : "5c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Bubble_Sort_Array::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Bubble_Sort_Array-Debug-26c7fbd42fcc6b84476a.json",
+					"name" : "Bubble_Sort_Array",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Bubble_Sort_Vetor::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Bubble_Sort_Vetor-Debug-096fe974bed8ada5b465.json",
+					"name" : "Bubble_Sort_Vetor",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Matriz_Numeros_diagonais::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Matriz_Numeros_diagonais-Debug-e1adb50fcd395d2a6215.json",
+					"name" : "Matriz_Numeros_diagonais",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Ordenacao_de_vetores_1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Ordenacao_de_vetores_1-Debug-de1447a91b68aaa214ca.json",
+					"name" : "Ordenacao_de_vetores_1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ordenacao_de_vetores::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ordenacao_de_vetores-Debug-0506f83efb1a3411a40c.json",
+					"name" : "ordenacao_de_vetores",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/lives/Desktop/Faculdade/Programacao/Estudos/cmake-build-debug",
+		"source" : "C:/Users/lives/Desktop/Faculdade/Programacao/Estudos"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
