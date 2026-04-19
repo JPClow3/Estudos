@@ -1,10 +1,10 @@
 marca;qtdRodas;modelo;velocidade;numMarchas;bagageiro
-Caloi;2;Elite Carbon;27;24;False
-Sense;2;Impact SL;25;21;False
-Scott;2;Scale 940;30;12;False
-Trek;2;Marlin 7;28;18;False
-Giant;2;Talon 3;26;21;False
-Specialized;2;Rockhopper;27;24;False
-Cannondale;2;Trail 8;29;12;False
-Merida;2;Big Nine 300;28;18;False
-GT;2;Aggressor Pro;27;21;False
+Caloi;2;Elite Carbon 2;27;22;false
+Sense;2;Impact SL;25;21;false
+Scott;2;Scale 940;30;12;true
+Trek;2;Marlin 7;28;18;false
+Giant;2;Talon 3;26;21;false
+Specialized;2;Rockhopper;27;24;false
+Cannondale;2;Trail 8;29;12;false
+Merida;2;Big Nine 300;28;18;false
+GT;2;Aggressor Pro;27;21;false

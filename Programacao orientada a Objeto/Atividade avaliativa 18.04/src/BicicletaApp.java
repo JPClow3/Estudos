@@ -4,7 +4,8 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Objects;
 
 public class BicicletaApp extends JFrame {
     private final BicicletaService service;
@@ -51,7 +52,7 @@ public class BicicletaApp extends JFrame {
     private void adicionar() {
         Bicicleta b = dialogoBicicleta(null);
         if (b != null) {
-            List<Bicicleta> lista = service.lerBicicletas();
+            java.util.List<Bicicleta> lista = service.lerBicicletas();
             lista.add(b);
             service.salvarBicicletas(lista);
             carregarTabela();
@@ -64,7 +65,7 @@ public class BicicletaApp extends JFrame {
             JOptionPane.showMessageDialog(this, "Selecione uma linha para editar.");
             return;
         }
-        List<Bicicleta> lista = service.lerBicicletas();
+        java.util.List<Bicicleta> lista = service.lerBicicletas();
         Bicicleta atual = lista.get(sel);
         Bicicleta editada = dialogoBicicleta(atual);
         if (editada != null) {
@@ -82,7 +83,7 @@ public class BicicletaApp extends JFrame {
         }
         int resp = JOptionPane.showConfirmDialog(this, "Confirma exclusão?", "Excluir", JOptionPane.YES_NO_OPTION);
         if (resp == JOptionPane.YES_OPTION) {
-            List<Bicicleta> lista = service.lerBicicletas();
+            java.util.List<Bicicleta> lista = service.lerBicicletas();
             lista.remove(sel);
             service.salvarBicicletas(lista);
             carregarTabela();
