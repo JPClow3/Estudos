@@ -1,0 +1,1001 @@
+id,nome,idade,peso,velocidadeMaxima,raca
+1,Sombra_5289,11,371.73,61.13,Crioulo
+2,Apollo_9858,5,382.45,64.38,Appaloosa
+3,Atlas_6871,15,552.89,58.66,Appaloosa
+4,Furacão_9556,11,553.13,44.92,Crioulo
+5,Relampago_5981,12,374.9,61.58,Campolina
+6,Valente_8261,12,525.82,42.98,Crioulo
+7,Valente_1158,13,386.77,45.43,Appaloosa
+8,Mustang_9702,11,529.96,64.14,Appaloosa
+9,Sombra_2946,9,511.78,63.33,Paint Horse
+10,Titan_7259,11,358.54,45.99,Campolina
+11,Relampago_9768,2,558.81,49.59,Appaloosa
+12,Espartano_7440,15,389.39,67.4,Puro Sangue
+13,Atlas_9314,12,483.39,59.73,Puro Sangue
+14,Tempestade_8778,4,593.76,52.04,Crioulo
+15,Furacão_69,2,552.46,60.56,Quarto de Milha
+16,Relampago_5251,12,474.44,70.03,Crioulo
+17,Pegasus_7866,9,430.74,62.91,Campolina
+18,Valente_1910,7,404.52,70.74,Puro Sangue
+19,Sombra_6793,11,579.72,45.88,Campolina
+20,Relampago_6152,10,549.47,67.73,Crioulo
+21,Raio_9433,6,502.88,57.76,Crioulo
+22,Espartano_2250,12,467.08,52.11,Quarto de Milha
+23,Raio_8199,2,562.61,41.45,Campolina
+24,Cometa_2781,14,484.1,64.18,Campolina
+25,Veloz_9592,4,510.87,62.49,Crioulo
+26,Cometa_6291,2,518.34,61.18,Puro Sangue
+27,Pegasus_7478,6,522.23,47.97,Paint Horse
+28,Mustang_5886,14,350.72,60.93,Campolina
+29,Tempestade_8518,2,595.17,69.87,Campolina
+30,Relampago_9102,6,404.08,64.45,Puro Sangue
+31,Trovão_5474,12,593.33,47.09,Crioulo
+32,Dominante_9749,9,354.39,44.69,Mangalarga
+33,Dominante_174,6,513.62,54.5,Mangalarga
+34,Espartano_3067,15,575.31,69.92,Puro Sangue
+35,Titan_4646,2,462.43,74.68,Crioulo
+36,Veloz_6219,5,582.37,48.75,Quarto de Milha
+37,Raio_1919,8,544.7,66.5,Mangalarga
+38,Espartano_8816,9,505.8,65.32,Puro Sangue
+39,Ventania_8464,11,533.57,60.66,Crioulo
+40,Ventania_672,4,536.36,47.41,Crioulo
+41,Atlas_8318,9,362.95,60.28,Quarto de Milha
+42,Trovão_7501,7,489.03,70.95,Appaloosa
+43,Lendario_3444,6,420.95,47.39,Paint Horse
+44,Sombra_7355,14,377.99,41.71,Puro Sangue
+45,Ventania_1010,11,580.87,71.38,Crioulo
+46,Ventania_2216,3,436.35,50.82,Crioulo
+47,Trovão_4613,4,426.66,42.98,Mangalarga
+48,Lendario_913,6,584.93,58.14,Quarto de Milha
+49,Lendario_6276,14,561.96,48.7,Appaloosa
+50,Veloz_3178,9,405.91,73.78,Campolina
+51,Raio_3782,3,450.55,41.93,Puro Sangue
+52,Veloz_8066,14,406.19,51.51,Paint Horse
+53,Mustang_6718,4,424.94,73.38,Crioulo
+54,Tempestade_681,4,356.78,74.49,Puro Sangue
+55,Atlas_4903,13,522.01,49.49,Mangalarga
+56,Estrela_9767,11,432.84,50.87,Campolina
+57,Estrela_1452,12,597.28,40.29,Mangalarga
+58,Titan_3863,13,448.22,49.57,Mangalarga
+59,Furacão_1300,3,565.42,47.27,Quarto de Milha
+60,Valente_6413,4,424.49,71.69,Campolina
+61,Dominante_4111,8,564.27,67.56,Quarto de Milha
+62,Atlas_9071,11,441.48,63.33,Campolina
+63,Estrela_8556,2,476.21,71.71,Puro Sangue
+64,Sombra_3016,9,386.3,45.0,Crioulo
+65,Sombra_2225,4,581.83,70.58,Crioulo
+66,Galante_3025,7,597.29,72.61,Paint Horse
+67,Valente_8228,4,409.34,71.54,Mangalarga
+68,Apollo_3922,4,524.02,53.87,Mangalarga
+69,Pegasus_9115,4,582.04,70.08,Puro Sangue
+70,Trovão_4925,14,508.67,61.65,Paint Horse
+71,Raio_5899,9,471.88,56.1,Mangalarga
+72,Mustang_2243,6,401.7,58.62,Crioulo
+73,Pegasus_1016,14,419.92,73.81,Paint Horse
+74,Pegasus_1292,8,429.86,58.92,Mangalarga
+75,Relampago_4483,15,451.18,68.38,Mangalarga
+76,Ventania_9224,3,362.78,58.62,Campolina
+77,Trovão_1268,14,594.33,50.34,Crioulo
+78,Ventania_1193,14,359.28,40.4,Crioulo
+79,Tempestade_7767,10,537.27,64.92,Appaloosa
+80,Furacão_4142,7,586.31,68.05,Quarto de Milha
+81,Sombra_4488,13,428.26,43.03,Mangalarga
+82,Raio_9408,12,460.74,64.85,Appaloosa
+83,Cometa_4033,8,374.39,53.02,Crioulo
+84,Lendario_657,15,595.39,70.89,Crioulo
+85,Estrela_3773,3,413.32,48.83,Puro Sangue
+86,Valente_2603,2,579.75,54.57,Quarto de Milha
+87,Estrela_3891,8,475.26,58.25,Campolina
+88,Sombra_5139,2,534.71,40.29,Puro Sangue
+89,Relampago_8069,2,574.83,53.61,Campolina
+90,Estrela_7584,6,565.94,58.84,Appaloosa
+91,Cometa_3931,15,422.87,57.31,Appaloosa
+92,Tempestade_2787,10,444.33,61.92,Puro Sangue
+93,Veloz_2736,13,556.65,55.04,Appaloosa
+94,Cometa_1235,10,553.32,65.54,Quarto de Milha
+95,Cometa_6720,8,399.87,43.46,Quarto de Milha
+96,Lendario_2706,10,413.53,73.43,Mangalarga
+97,Titan_1709,14,382.2,47.4,Paint Horse
+98,Furacão_7446,14,558.77,41.54,Campolina
+99,Tempestade_9680,9,595.46,47.3,Crioulo
+100,Furacão_3223,4,549.07,52.58,Campolina
+101,Titan_5641,3,362.15,68.94,Paint Horse
+102,Pegasus_8760,8,427.71,48.93,Paint Horse
+103,Titan_5713,15,550.25,51.81,Quarto de Milha
+104,Ventania_9931,5,470.08,45.51,Campolina
+105,Cometa_1766,11,372.12,53.52,Paint Horse
+106,Sombra_9919,14,549.17,74.54,Mangalarga
+107,Raio_8229,11,553.65,61.59,Crioulo
+108,Relampago_6438,11,480.79,43.27,Crioulo
+109,Apollo_164,2,599.49,60.32,Crioulo
+110,Pegasus_145,5,377.65,69.1,Campolina
+111,Espartano_8158,13,411.94,49.3,Appaloosa
+112,Trovão_5215,3,478.77,71.51,Mangalarga
+113,Titan_8062,9,442.97,70.73,Puro Sangue
+114,Mustang_742,11,577.75,47.72,Mangalarga
+115,Veloz_7800,9,387.51,41.67,Puro Sangue
+116,Estrela_7559,14,520.51,44.81,Quarto de Milha
+117,Cometa_2400,3,557.97,62.42,Quarto de Milha
+118,Furacão_6696,10,451.91,63.46,Campolina
+119,Mustang_2580,12,533.82,63.18,Paint Horse
+120,Furacão_6377,8,571.41,65.64,Puro Sangue
+121,Raio_8510,2,488.36,54.3,Quarto de Milha
+122,Veloz_3397,10,377.11,48.33,Puro Sangue
+123,Relampago_8579,15,439.98,73.17,Puro Sangue
+124,Veloz_8549,10,587.98,51.77,Quarto de Milha
+125,Relampago_6156,6,543.19,60.18,Quarto de Milha
+126,Relampago_8127,10,407.95,40.3,Campolina
+127,Galante_3037,15,590.81,57.06,Mangalarga
+128,Furacão_1752,13,528.64,50.62,Crioulo
+129,Titan_6026,12,359.83,72.68,Paint Horse
+130,Ventania_5094,2,511.06,68.37,Crioulo
+131,Lendario_3263,8,551.1,70.36,Mangalarga
+132,Apollo_1750,14,424.37,42.68,Paint Horse
+133,Apollo_2653,3,480.81,60.15,Appaloosa
+134,Titan_8196,4,554.12,40.45,Puro Sangue
+135,Relampago_5057,14,460.34,59.75,Quarto de Milha
+136,Cometa_9096,11,556.44,53.93,Appaloosa
+137,Sombra_1855,13,562.4,42.1,Appaloosa
+138,Ventania_4924,5,561.71,72.79,Paint Horse
+139,Furacão_3661,13,593.9,54.08,Quarto de Milha
+140,Tempestade_976,6,584.46,70.91,Paint Horse
+141,Furacão_367,14,504.78,71.59,Campolina
+142,Mustang_6994,3,563.11,47.87,Appaloosa
+143,Veloz_346,10,431.68,47.36,Crioulo
+144,Apollo_5274,11,500.87,40.07,Crioulo
+145,Sombra_1542,8,561.5,53.61,Crioulo
+146,Atlas_9193,9,375.04,57.43,Appaloosa
+147,Cometa_7591,12,440.17,42.73,Mangalarga
+148,Espartano_8473,15,481.04,45.89,Quarto de Milha
+149,Trovão_5549,11,437.38,42.67,Crioulo
+150,Raio_8349,13,369.71,60.58,Paint Horse
+151,Cometa_1532,13,436.67,49.28,Paint Horse
+152,Cometa_9745,9,548.77,60.33,Mangalarga
+153,Espartano_1941,10,584.34,64.78,Campolina
+154,Lendario_8984,8,471.4,66.31,Puro Sangue
+155,Furacão_751,10,529.29,64.23,Quarto de Milha
+156,Mustang_2103,3,551.28,70.59,Crioulo
+157,Titan_2766,8,375.71,42.23,Paint Horse
+158,Mustang_8146,3,520.53,64.77,Puro Sangue
+159,Raio_3346,11,564.78,60.79,Puro Sangue
+160,Raio_3171,12,560.88,44.05,Puro Sangue
+161,Estrela_8474,13,377.29,68.77,Campolina
+162,Veloz_1077,5,539.37,48.7,Crioulo
+163,Titan_9382,8,526.13,46.57,Crioulo
+164,Galante_5407,11,414.41,52.08,Appaloosa
+165,Raio_5846,7,426.48,68.02,Campolina
+166,Mustang_4501,9,425.61,48.34,Campolina
+167,Pegasus_3081,15,396.53,64.39,Campolina
+168,Tempestade_1353,12,594.62,56.18,Appaloosa
+169,Titan_7162,14,434.59,55.45,Mangalarga
+170,Estrela_1402,11,516.3,61.5,Crioulo
+171,Espartano_8772,6,353.56,65.56,Appaloosa
+172,Trovão_7452,2,463.95,45.49,Mangalarga
+173,Atlas_3651,7,531.63,62.92,Puro Sangue
+174,Veloz_2859,9,375.4,69.95,Crioulo
+175,Ventania_6534,13,527.13,54.55,Paint Horse
+176,Dominante_4566,6,575.47,41.98,Crioulo
+177,Valente_3545,13,517.84,50.15,Appaloosa
+178,Relampago_638,14,583.1,58.92,Crioulo
+179,Veloz_1847,7,485.74,72.29,Campolina
+180,Cometa_7893,12,521.32,43.39,Campolina
+181,Cometa_2520,9,516.9,68.74,Crioulo
+182,Lendario_4965,3,569.98,62.25,Crioulo
+183,Ventania_5248,11,565.97,53.69,Campolina
+184,Tempestade_7163,3,500.21,50.76,Appaloosa
+185,Veloz_5441,11,496.04,64.51,Mangalarga
+186,Raio_112,9,530.52,56.99,Quarto de Milha
+187,Trovão_579,7,539.35,48.95,Quarto de Milha
+188,Valente_8125,10,465.91,68.29,Puro Sangue
+189,Furacão_8764,14,563.53,44.14,Mangalarga
+190,Estrela_2721,7,388.42,62.86,Campolina
+191,Sombra_4326,8,467.64,50.92,Paint Horse
+192,Tempestade_6994,4,422.04,64.79,Campolina
+193,Furacão_9152,13,373.88,60.6,Quarto de Milha
+194,Ventania_2132,14,496.23,64.27,Mangalarga
+195,Sombra_1184,10,448.56,57.05,Puro Sangue
+196,Mustang_5209,8,365.6,54.87,Appaloosa
+197,Apollo_9092,12,376.59,73.55,Quarto de Milha
+198,Atlas_6051,3,394.35,58.04,Appaloosa
+199,Pegasus_2664,9,350.69,40.57,Appaloosa
+200,Raio_1640,5,487.32,48.43,Paint Horse
+201,Tempestade_6266,10,465.92,68.37,Paint Horse
+202,Estrela_9294,5,472.56,63.23,Campolina
+203,Valente_824,12,382.59,67.25,Puro Sangue
+204,Pegasus_9356,13,451.62,65.79,Puro Sangue
+205,Galante_1805,3,571.98,42.02,Campolina
+206,Lendario_6911,11,471.67,40.34,Crioulo
+207,Furacão_8370,6,415.37,66.61,Paint Horse
+208,Titan_9813,3,441.41,53.15,Paint Horse
+209,Tempestade_1069,10,381.76,42.9,Mangalarga
+210,Atlas_7823,10,434.48,54.98,Paint Horse
+211,Trovão_3209,13,378.46,70.94,Campolina
+212,Trovão_1358,10,527.28,67.3,Mangalarga
+213,Lendario_5698,9,452.52,40.45,Quarto de Milha
+214,Atlas_5025,2,492.86,66.4,Crioulo
+215,Raio_7668,3,588.56,73.57,Appaloosa
+216,Apollo_293,6,465.69,56.33,Quarto de Milha
+217,Pegasus_2951,12,494.57,69.06,Puro Sangue
+218,Trovão_4287,7,392.08,70.79,Campolina
+219,Apollo_1434,6,538.57,50.16,Crioulo
+220,Raio_882,7,552.72,64.56,Puro Sangue
+221,Estrela_7816,2,454.07,56.83,Campolina
+222,Cometa_5687,13,542.46,59.98,Crioulo
+223,Tempestade_4775,5,448.66,64.52,Appaloosa
+224,Trovão_3793,11,451.03,67.16,Mangalarga
+225,Ventania_9212,15,379.12,52.83,Puro Sangue
+226,Tempestade_3142,10,535.3,46.45,Crioulo
+227,Veloz_7829,7,458.91,44.97,Puro Sangue
+228,Dominante_4409,10,379.64,69.43,Quarto de Milha
+229,Ventania_1997,3,444.2,67.8,Appaloosa
+230,Mustang_2129,3,582.48,56.15,Mangalarga
+231,Sombra_9528,15,454.05,64.78,Crioulo
+232,Dominante_9127,9,403.69,41.03,Appaloosa
+233,Estrela_8419,5,423.02,51.02,Appaloosa
+234,Trovão_6893,11,446.46,71.93,Appaloosa
+235,Veloz_1403,2,551.8,48.98,Mangalarga
+236,Trovão_5674,5,400.66,72.18,Campolina
+237,Cometa_4066,15,520.57,63.87,Campolina
+238,Valente_4939,3,543.4,65.06,Crioulo
+239,Galante_4863,9,456.76,65.91,Quarto de Milha
+240,Trovão_5865,2,480.8,49.76,Puro Sangue
+241,Cometa_3861,3,535.17,41.44,Mangalarga
+242,Mustang_2087,9,433.6,66.87,Mangalarga
+243,Trovão_2413,14,505.93,70.99,Paint Horse
+244,Ventania_8081,3,424.02,42.54,Paint Horse
+245,Dominante_7179,12,432.94,52.47,Paint Horse
+246,Dominante_3236,3,444.0,52.17,Crioulo
+247,Veloz_9265,8,501.11,47.66,Paint Horse
+248,Galante_9219,9,427.7,58.13,Quarto de Milha
+249,Raio_6346,4,379.85,63.45,Crioulo
+250,Atlas_7445,6,513.32,74.33,Paint Horse
+251,Galante_2984,4,452.99,55.0,Paint Horse
+252,Relampago_4593,2,374.45,68.84,Campolina
+253,Trovão_6957,5,445.29,64.41,Quarto de Milha
+254,Espartano_1073,6,585.41,57.05,Appaloosa
+255,Espartano_6287,15,496.48,69.93,Quarto de Milha
+256,Dominante_2108,4,427.41,62.2,Crioulo
+257,Dominante_4190,13,436.27,41.74,Mangalarga
+258,Furacão_4709,6,378.47,72.4,Appaloosa
+259,Pegasus_2917,9,580.15,70.69,Puro Sangue
+260,Sombra_4191,2,554.5,64.98,Appaloosa
+261,Lendario_953,6,594.19,56.43,Crioulo
+262,Trovão_4104,4,572.73,56.35,Campolina
+263,Ventania_4056,10,372.91,51.76,Puro Sangue
+264,Atlas_1089,6,472.46,54.69,Quarto de Milha
+265,Pegasus_1640,7,577.94,51.33,Appaloosa
+266,Trovão_1668,15,476.56,53.45,Appaloosa
+267,Raio_112,15,374.44,45.85,Paint Horse
+268,Pegasus_2049,9,447.81,61.97,Quarto de Milha
+269,Pegasus_1909,11,481.45,45.35,Appaloosa
+270,Raio_8259,5,354.4,46.27,Crioulo
+271,Espartano_2688,15,571.29,57.95,Paint Horse
+272,Tempestade_4677,15,567.93,66.53,Mangalarga
+273,Pegasus_6570,11,515.54,42.86,Campolina
+274,Tempestade_6958,7,386.88,47.0,Crioulo
+275,Valente_7077,11,468.05,73.56,Quarto de Milha
+276,Ventania_4686,5,507.45,63.32,Paint Horse
+277,Espartano_6060,3,529.78,57.79,Mangalarga
+278,Furacão_7009,9,497.17,66.23,Appaloosa
+279,Trovão_1857,12,513.28,65.59,Crioulo
+280,Cometa_683,11,406.71,74.76,Crioulo
+281,Cometa_2801,7,475.76,53.65,Quarto de Milha
+282,Cometa_6088,9,425.56,61.71,Mangalarga
+283,Atlas_2480,11,455.8,70.03,Crioulo
+284,Dominante_131,5,394.62,46.24,Puro Sangue
+285,Dominante_7582,6,528.28,69.61,Mangalarga
+286,Estrela_5080,8,481.01,70.84,Campolina
+287,Apollo_3528,15,542.6,70.21,Quarto de Milha
+288,Titan_9676,4,381.61,61.26,Campolina
+289,Estrela_8880,8,394.5,61.62,Crioulo
+290,Ventania_5781,9,458.17,45.71,Crioulo
+291,Sombra_8009,8,443.39,69.43,Crioulo
+292,Tempestade_3707,13,375.44,62.37,Appaloosa
+293,Sombra_517,15,372.73,44.17,Crioulo
+294,Valente_8313,5,427.59,64.74,Paint Horse
+295,Espartano_7145,13,583.37,66.01,Puro Sangue
+296,Veloz_9249,12,501.68,45.41,Paint Horse
+297,Estrela_1492,3,403.48,48.16,Puro Sangue
+298,Titan_3113,3,457.31,56.75,Quarto de Milha
+299,Dominante_3172,4,511.86,50.94,Puro Sangue
+300,Furacão_8012,2,469.21,65.95,Crioulo
+301,Estrela_9242,7,380.94,62.92,Crioulo
+302,Sombra_6450,2,428.72,63.94,Mangalarga
+303,Raio_6034,9,589.16,45.57,Crioulo
+304,Espartano_7632,9,469.72,70.44,Appaloosa
+305,Estrela_518,4,539.18,48.91,Puro Sangue
+306,Titan_4939,12,516.02,46.17,Quarto de Milha
+307,Sombra_4575,9,540.67,73.96,Paint Horse
+308,Estrela_1776,15,546.36,65.27,Puro Sangue
+309,Cometa_9713,5,354.78,60.41,Appaloosa
+310,Lendario_5696,11,446.19,68.84,Paint Horse
+311,Veloz_8284,6,431.73,55.15,Appaloosa
+312,Apollo_8759,9,450.98,42.01,Appaloosa
+313,Pegasus_8093,7,439.43,68.67,Campolina
+314,Cometa_1075,15,396.0,69.18,Crioulo
+315,Espartano_2325,7,399.29,66.22,Paint Horse
+316,Mustang_3523,6,401.62,66.93,Crioulo
+317,Atlas_2842,6,375.86,64.87,Campolina
+318,Veloz_4229,13,518.85,68.51,Puro Sangue
+319,Ventania_891,2,502.62,54.85,Appaloosa
+320,Veloz_3636,9,512.23,57.98,Mangalarga
+321,Sombra_2112,8,382.35,57.23,Campolina
+322,Lendario_5610,11,397.98,49.41,Appaloosa
+323,Espartano_3087,14,569.99,69.12,Puro Sangue
+324,Titan_8605,12,350.39,54.7,Mangalarga
+325,Veloz_1735,11,356.03,56.25,Appaloosa
+326,Tempestade_9938,11,408.24,58.67,Mangalarga
+327,Lendario_8758,15,517.38,44.42,Campolina
+328,Ventania_7582,8,567.37,47.36,Campolina
+329,Dominante_2806,15,461.4,58.03,Paint Horse
+330,Valente_5845,12,487.88,46.5,Campolina
+331,Espartano_7811,6,473.13,48.73,Puro Sangue
+332,Furacão_7030,10,361.87,65.32,Puro Sangue
+333,Apollo_3693,11,531.65,58.14,Quarto de Milha
+334,Estrela_5432,15,504.05,49.84,Appaloosa
+335,Trovão_1565,15,372.04,63.07,Appaloosa
+336,Espartano_8595,11,490.24,66.79,Crioulo
+337,Ventania_4478,15,536.56,41.0,Mangalarga
+338,Valente_7064,7,461.28,62.98,Puro Sangue
+339,Lendario_1448,6,350.12,74.23,Quarto de Milha
+340,Lendario_1639,8,486.62,43.76,Quarto de Milha
+341,Lendario_6887,12,522.39,55.4,Campolina
+342,Ventania_3521,14,523.33,68.71,Appaloosa
+343,Sombra_5502,13,403.69,60.73,Puro Sangue
+344,Estrela_9390,2,526.93,74.24,Mangalarga
+345,Pegasus_5908,12,423.87,57.83,Campolina
+346,Trovão_7328,9,560.29,51.97,Paint Horse
+347,Relampago_7938,14,531.24,52.72,Quarto de Milha
+348,Espartano_8377,9,477.45,61.2,Crioulo
+349,Sombra_7657,2,379.56,49.81,Quarto de Milha
+350,Apollo_9716,6,594.57,46.62,Appaloosa
+351,Relampago_9179,2,554.2,74.39,Crioulo
+352,Trovão_8440,8,535.7,68.72,Quarto de Milha
+353,Mustang_5576,9,490.22,42.95,Campolina
+354,Raio_7610,13,431.23,46.45,Puro Sangue
+355,Apollo_2593,11,406.51,49.28,Puro Sangue
+356,Sombra_3109,12,529.83,67.92,Campolina
+357,Raio_5750,6,397.12,50.75,Crioulo
+358,Cometa_6639,11,377.9,74.21,Appaloosa
+359,Valente_4773,3,384.88,41.33,Campolina
+360,Estrela_8775,9,386.08,62.61,Quarto de Milha
+361,Ventania_1153,8,467.33,52.87,Appaloosa
+362,Raio_5384,13,520.91,60.14,Mangalarga
+363,Valente_1312,14,508.67,48.37,Paint Horse
+364,Sombra_4375,12,486.43,60.71,Mangalarga
+365,Cometa_8548,15,384.0,49.54,Paint Horse
+366,Lendario_4360,10,364.1,61.41,Puro Sangue
+367,Cometa_110,3,594.86,64.25,Crioulo
+368,Sombra_2697,7,362.79,58.8,Appaloosa
+369,Pegasus_9731,10,495.1,56.33,Mangalarga
+370,Espartano_9906,7,474.04,59.56,Appaloosa
+371,Raio_2639,9,474.51,63.04,Mangalarga
+372,Valente_8591,10,468.56,56.02,Puro Sangue
+373,Raio_8317,8,585.64,74.57,Crioulo
+374,Veloz_920,9,380.41,65.19,Appaloosa
+375,Dominante_2012,4,364.98,45.39,Puro Sangue
+376,Relampago_6753,3,373.6,50.45,Crioulo
+377,Atlas_8122,15,377.85,73.42,Puro Sangue
+378,Galante_3892,8,453.45,40.1,Campolina
+379,Sombra_565,10,415.44,42.5,Appaloosa
+380,Valente_2577,9,582.29,62.07,Puro Sangue
+381,Veloz_2717,14,383.79,68.84,Puro Sangue
+382,Mustang_8290,15,544.66,63.66,Paint Horse
+383,Ventania_93,10,352.36,62.3,Campolina
+384,Mustang_8862,8,401.07,45.46,Puro Sangue
+385,Estrela_2360,8,548.2,63.69,Crioulo
+386,Espartano_6727,13,449.84,53.68,Quarto de Milha
+387,Ventania_6959,10,456.96,73.83,Paint Horse
+388,Furacão_5533,10,377.08,72.6,Crioulo
+389,Veloz_5714,8,522.81,53.78,Crioulo
+390,Trovão_2648,10,442.58,51.6,Paint Horse
+391,Pegasus_5328,13,406.63,64.77,Appaloosa
+392,Titan_8858,13,510.48,44.97,Campolina
+393,Atlas_3089,2,367.44,42.18,Appaloosa
+394,Dominante_3883,6,588.06,48.14,Paint Horse
+395,Trovão_1647,12,478.94,45.99,Campolina
+396,Raio_6963,8,513.96,57.17,Campolina
+397,Atlas_7519,11,371.9,74.01,Puro Sangue
+398,Cometa_6179,11,367.75,44.89,Puro Sangue
+399,Trovão_3729,10,442.14,71.37,Paint Horse
+400,Dominante_4178,13,549.61,70.16,Puro Sangue
+401,Trovão_8578,12,594.01,41.04,Appaloosa
+402,Atlas_1395,4,482.76,55.93,Quarto de Milha
+403,Trovão_5751,11,487.22,64.2,Puro Sangue
+404,Pegasus_4784,3,476.89,67.04,Paint Horse
+405,Ventania_6643,2,469.08,55.58,Mangalarga
+406,Pegasus_5720,9,534.78,68.51,Paint Horse
+407,Ventania_5787,5,581.29,61.01,Appaloosa
+408,Galante_7864,15,406.85,68.15,Mangalarga
+409,Relampago_5752,8,496.44,45.17,Appaloosa
+410,Mustang_8485,14,582.71,62.41,Puro Sangue
+411,Estrela_4643,13,365.61,43.65,Paint Horse
+412,Relampago_3699,14,500.77,63.92,Crioulo
+413,Tempestade_4728,6,481.44,68.46,Crioulo
+414,Atlas_1738,13,549.51,67.59,Appaloosa
+415,Tempestade_853,15,491.88,54.67,Quarto de Milha
+416,Cometa_7600,5,494.98,55.62,Paint Horse
+417,Espartano_3964,8,388.66,49.59,Campolina
+418,Sombra_5709,12,448.64,63.44,Mangalarga
+419,Furacão_1126,7,381.01,42.7,Quarto de Milha
+420,Ventania_1358,3,510.4,48.23,Campolina
+421,Lendario_1901,11,382.93,68.19,Appaloosa
+422,Galante_9464,6,352.09,41.35,Appaloosa
+423,Sombra_1196,14,468.1,51.78,Campolina
+424,Atlas_2233,13,589.73,62.54,Mangalarga
+425,Trovão_6539,9,458.56,52.94,Appaloosa
+426,Lendario_5676,8,365.18,45.5,Appaloosa
+427,Furacão_2531,12,432.09,40.39,Campolina
+428,Valente_4973,3,406.63,58.89,Campolina
+429,Atlas_9709,6,406.09,42.0,Paint Horse
+430,Galante_6237,11,472.19,58.0,Paint Horse
+431,Valente_8858,13,413.71,63.9,Campolina
+432,Atlas_238,4,367.93,61.08,Appaloosa
+433,Relampago_8100,5,537.2,49.7,Paint Horse
+434,Apollo_2543,5,395.09,66.59,Campolina
+435,Estrela_7843,6,363.45,71.29,Puro Sangue
+436,Tempestade_1925,6,533.76,55.11,Crioulo
+437,Titan_7014,8,525.73,72.54,Quarto de Milha
+438,Relampago_9323,11,528.55,61.69,Campolina
+439,Titan_1971,5,409.1,61.5,Paint Horse
+440,Sombra_5569,2,593.43,52.38,Appaloosa
+441,Raio_9234,3,426.2,61.13,Appaloosa
+442,Veloz_4365,8,483.56,69.37,Paint Horse
+443,Dominante_1919,9,350.42,72.22,Crioulo
+444,Ventania_2910,8,358.79,42.81,Appaloosa
+445,Apollo_4320,6,511.88,64.03,Puro Sangue
+446,Cometa_6351,7,494.35,58.59,Mangalarga
+447,Tempestade_5160,4,476.23,45.24,Paint Horse
+448,Dominante_7387,14,535.34,49.34,Quarto de Milha
+449,Veloz_792,15,512.55,48.42,Quarto de Milha
+450,Lendario_4545,9,455.3,42.33,Campolina
+451,Galante_1764,7,434.59,63.88,Appaloosa
+452,Galante_9271,3,350.64,66.45,Appaloosa
+453,Mustang_6701,7,568.47,70.74,Puro Sangue
+454,Tempestade_7660,3,556.88,50.44,Campolina
+455,Mustang_7332,12,361.73,48.63,Paint Horse
+456,Relampago_4859,10,493.95,58.43,Puro Sangue
+457,Galante_658,5,382.44,67.35,Crioulo
+458,Sombra_3229,14,351.36,54.8,Mangalarga
+459,Estrela_5399,6,526.6,73.1,Appaloosa
+460,Trovão_7240,13,428.0,58.6,Mangalarga
+461,Dominante_3486,6,454.7,55.08,Mangalarga
+462,Trovão_6029,3,392.79,46.74,Quarto de Milha
+463,Ventania_5696,10,589.46,55.24,Puro Sangue
+464,Furacão_6723,8,538.24,51.46,Quarto de Milha
+465,Furacão_7952,11,449.24,59.96,Puro Sangue
+466,Pegasus_8747,13,595.46,46.07,Campolina
+467,Mustang_6027,4,504.06,70.24,Campolina
+468,Cometa_9638,12,571.96,67.78,Crioulo
+469,Dominante_465,12,479.06,64.8,Paint Horse
+470,Apollo_6794,13,392.97,43.26,Crioulo
+471,Mustang_5578,7,531.65,68.84,Appaloosa
+472,Pegasus_4716,12,495.38,41.44,Paint Horse
+473,Sombra_4389,11,369.79,62.82,Puro Sangue
+474,Titan_9321,10,383.54,62.28,Crioulo
+475,Ventania_5930,5,468.34,72.55,Quarto de Milha
+476,Espartano_5425,8,394.47,56.84,Campolina
+477,Dominante_328,9,482.1,64.31,Quarto de Milha
+478,Pegasus_4774,10,388.44,59.06,Puro Sangue
+479,Sombra_5180,15,471.93,60.07,Quarto de Milha
+480,Galante_7277,15,494.44,67.36,Campolina
+481,Lendario_3807,4,351.45,60.54,Campolina
+482,Relampago_5254,15,449.64,60.38,Puro Sangue
+483,Mustang_9662,9,473.75,66.62,Appaloosa
+484,Galante_5596,11,397.94,49.98,Puro Sangue
+485,Relampago_847,14,509.69,58.82,Quarto de Milha
+486,Sombra_9651,9,459.37,48.24,Quarto de Milha
+487,Galante_651,8,511.04,41.29,Paint Horse
+488,Valente_3120,4,485.68,46.84,Campolina
+489,Pegasus_2872,10,550.22,43.36,Paint Horse
+490,Furacão_9434,11,396.52,40.95,Appaloosa
+491,Pegasus_6365,4,394.15,47.13,Paint Horse
+492,Raio_2205,6,404.17,59.43,Appaloosa
+493,Dominante_7219,12,421.21,47.73,Appaloosa
+494,Titan_9672,2,417.4,66.04,Mangalarga
+495,Apollo_589,8,426.05,63.07,Appaloosa
+496,Dominante_9129,10,395.7,73.45,Paint Horse
+497,Dominante_9464,9,376.68,46.77,Paint Horse
+498,Mustang_8884,8,561.8,55.99,Paint Horse
+499,Sombra_9309,10,594.06,46.84,Mangalarga
+500,Atlas_5816,9,526.42,50.26,Paint Horse
+501,Espartano_8302,14,373.68,71.23,Mangalarga
+502,Furacão_2080,5,442.68,70.6,Puro Sangue
+503,Galante_4551,9,581.95,45.78,Paint Horse
+504,Relampago_4133,10,385.96,56.12,Campolina
+505,Apollo_3383,14,441.29,66.01,Crioulo
+506,Titan_8550,8,430.54,43.18,Appaloosa
+507,Titan_8233,14,562.16,67.73,Mangalarga
+508,Lendario_1644,14,474.41,63.78,Puro Sangue
+509,Estrela_3086,11,531.62,58.49,Puro Sangue
+510,Estrela_4971,3,360.52,50.1,Paint Horse
+511,Trovão_3052,14,536.64,73.11,Mangalarga
+512,Atlas_5441,5,521.26,44.47,Puro Sangue
+513,Espartano_2470,2,437.97,59.66,Appaloosa
+514,Relampago_1650,12,563.4,57.54,Paint Horse
+515,Tempestade_4147,4,478.71,41.89,Appaloosa
+516,Tempestade_6166,10,524.52,50.26,Campolina
+517,Titan_2367,7,421.93,65.58,Quarto de Milha
+518,Titan_103,11,551.67,44.5,Crioulo
+519,Titan_3307,5,508.24,45.79,Mangalarga
+520,Mustang_9262,9,589.66,68.62,Paint Horse
+521,Atlas_9895,10,552.43,40.92,Campolina
+522,Galante_1537,5,412.95,47.96,Paint Horse
+523,Trovão_1872,12,422.27,45.5,Crioulo
+524,Apollo_4247,10,556.33,69.11,Mangalarga
+525,Lendario_3046,15,589.07,67.93,Mangalarga
+526,Furacão_3827,14,438.03,68.17,Quarto de Milha
+527,Valente_5544,15,478.16,41.55,Crioulo
+528,Mustang_2564,12,524.96,61.58,Crioulo
+529,Estrela_2463,11,559.28,61.27,Appaloosa
+530,Valente_4663,14,410.77,62.14,Puro Sangue
+531,Relampago_7593,6,594.07,53.5,Mangalarga
+532,Sombra_8325,10,360.19,66.08,Crioulo
+533,Pegasus_7358,6,515.59,68.63,Appaloosa
+534,Dominante_8046,11,517.29,67.11,Puro Sangue
+535,Estrela_4060,12,510.27,66.15,Puro Sangue
+536,Furacão_5227,15,367.26,71.62,Quarto de Milha
+537,Estrela_7609,15,559.55,43.28,Appaloosa
+538,Estrela_8682,13,563.2,70.04,Puro Sangue
+539,Tempestade_2932,7,425.25,58.09,Paint Horse
+540,Dominante_1725,8,545.16,68.34,Paint Horse
+541,Lendario_1208,13,589.66,54.49,Puro Sangue
+542,Ventania_3955,7,434.91,64.95,Quarto de Milha
+543,Cometa_3856,9,462.08,45.12,Campolina
+544,Lendario_2224,15,485.6,63.15,Quarto de Milha
+545,Raio_7793,13,537.62,41.79,Puro Sangue
+546,Cometa_3663,14,399.99,70.76,Puro Sangue
+547,Dominante_3257,5,497.7,49.71,Paint Horse
+548,Galante_9913,5,596.49,47.14,Mangalarga
+549,Estrela_3284,10,468.04,63.23,Crioulo
+550,Pegasus_5091,3,467.52,65.33,Appaloosa
+551,Lendario_1064,9,587.38,40.75,Mangalarga
+552,Pegasus_4588,9,525.89,69.07,Campolina
+553,Lendario_4863,12,359.78,66.96,Quarto de Milha
+554,Trovão_8544,5,436.25,58.69,Appaloosa
+555,Cometa_5198,15,580.57,74.08,Mangalarga
+556,Valente_7544,11,368.76,71.94,Paint Horse
+557,Dominante_6309,14,377.11,56.56,Crioulo
+558,Titan_3310,11,512.34,71.96,Mangalarga
+559,Espartano_1357,6,431.46,57.26,Quarto de Milha
+560,Estrela_5443,13,508.85,73.71,Appaloosa
+561,Tempestade_9938,4,592.44,50.6,Mangalarga
+562,Tempestade_2437,12,534.9,41.32,Campolina
+563,Tempestade_1110,11,546.95,64.16,Puro Sangue
+564,Furacão_3985,3,498.67,41.09,Quarto de Milha
+565,Apollo_4749,13,481.63,53.14,Paint Horse
+566,Apollo_7727,10,387.8,46.23,Paint Horse
+567,Dominante_5256,4,477.07,48.99,Quarto de Milha
+568,Estrela_1681,10,417.13,51.3,Puro Sangue
+569,Dominante_100,10,351.76,57.92,Mangalarga
+570,Mustang_4177,15,542.48,64.65,Crioulo
+571,Sombra_6704,15,354.65,40.33,Mangalarga
+572,Ventania_19,8,414.95,41.97,Crioulo
+573,Valente_9878,11,383.93,57.13,Paint Horse
+574,Lendario_4456,8,363.07,49.38,Crioulo
+575,Cometa_2455,10,476.3,51.22,Quarto de Milha
+576,Apollo_3864,13,514.33,66.11,Mangalarga
+577,Pegasus_9951,2,588.59,71.17,Paint Horse
+578,Furacão_1292,14,506.43,71.39,Quarto de Milha
+579,Trovão_8943,8,524.15,72.39,Appaloosa
+580,Mustang_3511,2,475.52,48.8,Quarto de Milha
+581,Veloz_1494,14,573.06,54.0,Puro Sangue
+582,Mustang_9328,6,507.04,44.64,Puro Sangue
+583,Relampago_5299,14,511.75,70.24,Mangalarga
+584,Veloz_972,11,483.89,65.38,Mangalarga
+585,Atlas_7161,3,472.41,45.77,Quarto de Milha
+586,Espartano_9948,5,379.47,45.6,Mangalarga
+587,Titan_4473,2,546.41,70.11,Paint Horse
+588,Dominante_7309,8,364.97,55.66,Crioulo
+589,Furacão_8314,15,541.5,61.97,Paint Horse
+590,Ventania_5160,15,428.76,69.98,Campolina
+591,Ventania_921,8,369.12,44.77,Paint Horse
+592,Furacão_9542,2,474.67,66.76,Quarto de Milha
+593,Estrela_6212,3,393.68,42.39,Appaloosa
+594,Furacão_3189,8,369.21,69.09,Mangalarga
+595,Ventania_5721,12,471.27,41.41,Mangalarga
+596,Raio_9480,6,369.38,74.38,Campolina
+597,Atlas_2760,6,475.0,41.23,Campolina
+598,Apollo_3873,5,426.09,48.56,Crioulo
+599,Pegasus_8290,5,550.84,69.23,Crioulo
+600,Sombra_198,9,469.64,72.29,Puro Sangue
+601,Cometa_9309,2,376.06,57.02,Paint Horse
+602,Titan_8229,13,461.75,74.1,Paint Horse
+603,Relampago_8405,7,436.51,74.0,Quarto de Milha
+604,Relampago_2071,11,474.55,59.75,Mangalarga
+605,Pegasus_2762,14,542.31,54.85,Quarto de Milha
+606,Apollo_1876,4,476.79,40.22,Paint Horse
+607,Pegasus_1769,14,554.62,71.25,Mangalarga
+608,Relampago_1430,10,463.81,46.59,Crioulo
+609,Titan_4885,15,372.11,63.32,Paint Horse
+610,Cometa_9028,8,578.92,70.18,Mangalarga
+611,Tempestade_9496,9,527.0,60.74,Mangalarga
+612,Ventania_7512,15,366.83,58.55,Crioulo
+613,Relampago_4620,10,351.24,68.68,Puro Sangue
+614,Relampago_9197,2,582.87,50.65,Appaloosa
+615,Valente_8364,11,374.76,64.15,Quarto de Milha
+616,Estrela_6301,14,368.97,62.26,Appaloosa
+617,Mustang_8787,5,477.36,62.2,Quarto de Milha
+618,Furacão_326,4,497.96,56.61,Campolina
+619,Espartano_4862,7,495.58,49.2,Mangalarga
+620,Lendario_1121,7,415.04,49.13,Quarto de Milha
+621,Mustang_2286,3,580.27,61.38,Campolina
+622,Cometa_1113,8,556.94,74.97,Quarto de Milha
+623,Estrela_2147,4,407.52,74.99,Quarto de Milha
+624,Espartano_961,5,435.7,47.33,Crioulo
+625,Furacão_5888,13,526.13,57.89,Appaloosa
+626,Trovão_1481,11,359.3,62.77,Crioulo
+627,Atlas_5062,10,502.18,55.53,Quarto de Milha
+628,Valente_4385,7,389.16,51.4,Crioulo
+629,Pegasus_8589,14,545.68,73.09,Mangalarga
+630,Veloz_5103,10,500.78,48.61,Paint Horse
+631,Furacão_228,9,368.26,44.62,Quarto de Milha
+632,Raio_5456,15,358.35,65.76,Puro Sangue
+633,Sombra_9149,8,358.79,64.71,Campolina
+634,Atlas_7762,9,426.87,49.71,Mangalarga
+635,Cometa_6876,4,579.37,49.36,Appaloosa
+636,Atlas_7850,5,431.45,56.11,Appaloosa
+637,Tempestade_3320,2,365.21,66.9,Campolina
+638,Furacão_9139,14,442.27,45.94,Quarto de Milha
+639,Raio_1911,15,475.3,41.93,Campolina
+640,Dominante_2249,9,581.19,73.01,Campolina
+641,Tempestade_3945,15,575.43,58.21,Paint Horse
+642,Apollo_2804,11,515.22,64.93,Puro Sangue
+643,Furacão_9073,7,565.36,51.78,Crioulo
+644,Apollo_1676,8,581.66,70.93,Appaloosa
+645,Pegasus_3254,6,434.51,51.7,Crioulo
+646,Atlas_6122,15,531.03,56.1,Mangalarga
+647,Lendario_5191,7,480.37,71.88,Puro Sangue
+648,Tempestade_254,8,434.91,69.1,Paint Horse
+649,Pegasus_2810,2,598.81,46.04,Quarto de Milha
+650,Veloz_6964,15,513.72,45.29,Quarto de Milha
+651,Valente_9204,3,495.3,54.11,Puro Sangue
+652,Relampago_8774,13,491.89,41.72,Mangalarga
+653,Raio_3118,7,461.89,45.74,Campolina
+654,Valente_6308,4,545.01,57.6,Campolina
+655,Atlas_1861,15,575.23,69.51,Appaloosa
+656,Dominante_5614,12,382.47,63.66,Appaloosa
+657,Atlas_7180,6,471.91,70.22,Mangalarga
+658,Ventania_6278,8,518.73,48.07,Paint Horse
+659,Sombra_6174,7,507.08,73.9,Quarto de Milha
+660,Ventania_499,2,351.71,62.53,Mangalarga
+661,Trovão_9918,8,436.23,74.05,Quarto de Milha
+662,Relampago_6127,4,515.73,40.5,Campolina
+663,Espartano_4534,4,461.32,69.82,Crioulo
+664,Atlas_3150,11,440.0,53.73,Crioulo
+665,Galante_7095,8,479.6,61.68,Mangalarga
+666,Lendario_8846,15,352.34,47.65,Appaloosa
+667,Veloz_9332,4,546.15,58.06,Puro Sangue
+668,Valente_6474,15,456.94,63.4,Quarto de Milha
+669,Tempestade_4947,5,487.46,53.07,Crioulo
+670,Trovão_8763,4,486.56,67.2,Quarto de Milha
+671,Relampago_9522,5,580.77,44.82,Puro Sangue
+672,Apollo_5898,7,449.15,43.69,Crioulo
+673,Sombra_7081,6,448.79,58.91,Appaloosa
+674,Ventania_5470,14,366.35,69.16,Paint Horse
+675,Veloz_2229,14,472.19,52.95,Puro Sangue
+676,Lendario_4008,11,454.11,63.82,Mangalarga
+677,Lendario_3353,3,387.38,67.98,Puro Sangue
+678,Furacão_8157,9,507.6,54.05,Appaloosa
+679,Estrela_7556,9,474.49,70.73,Paint Horse
+680,Raio_3963,2,350.37,56.44,Mangalarga
+681,Relampago_1863,12,403.53,48.24,Quarto de Milha
+682,Espartano_7207,6,435.05,51.68,Paint Horse
+683,Dominante_2283,5,481.46,64.99,Mangalarga
+684,Valente_1731,13,567.01,67.07,Campolina
+685,Tempestade_5927,13,559.29,40.64,Campolina
+686,Cometa_2832,5,518.13,66.97,Crioulo
+687,Cometa_4558,8,550.22,56.32,Quarto de Milha
+688,Pegasus_9151,9,509.9,46.18,Appaloosa
+689,Sombra_1361,13,475.02,43.88,Paint Horse
+690,Espartano_1241,9,504.27,58.78,Crioulo
+691,Estrela_2611,13,513.54,54.59,Puro Sangue
+692,Apollo_5866,3,537.66,49.88,Mangalarga
+693,Tempestade_7128,2,416.64,58.28,Campolina
+694,Titan_35,10,532.89,72.15,Paint Horse
+695,Galante_9533,7,364.93,69.4,Puro Sangue
+696,Estrela_7874,7,429.59,68.45,Puro Sangue
+697,Relampago_1711,3,391.43,71.33,Puro Sangue
+698,Apollo_598,14,437.99,55.5,Campolina
+699,Raio_3254,12,587.28,40.29,Paint Horse
+700,Pegasus_3454,7,590.89,68.47,Crioulo
+701,Pegasus_7350,13,525.6,53.3,Quarto de Milha
+702,Apollo_4429,2,401.26,57.53,Crioulo
+703,Galante_3073,7,423.98,40.4,Mangalarga
+704,Relampago_2299,14,390.03,71.41,Quarto de Milha
+705,Raio_8795,5,414.61,50.54,Campolina
+706,Titan_3313,6,579.67,52.44,Crioulo
+707,Apollo_8014,8,395.19,67.57,Quarto de Milha
+708,Sombra_6624,13,356.64,59.08,Quarto de Milha
+709,Atlas_4524,3,474.3,43.45,Puro Sangue
+710,Furacão_6587,3,570.91,57.82,Campolina
+711,Furacão_3203,4,501.96,44.63,Paint Horse
+712,Mustang_5954,12,370.03,53.8,Crioulo
+713,Tempestade_3359,5,465.15,56.3,Puro Sangue
+714,Sombra_598,3,459.25,70.06,Appaloosa
+715,Lendario_5532,12,399.92,40.05,Appaloosa
+716,Atlas_3448,4,452.76,71.73,Paint Horse
+717,Mustang_2086,13,431.78,52.55,Appaloosa
+718,Galante_8060,4,425.06,49.17,Campolina
+719,Pegasus_508,15,524.78,52.17,Appaloosa
+720,Lendario_403,3,538.73,46.39,Campolina
+721,Trovão_8318,6,445.83,55.02,Quarto de Milha
+722,Pegasus_693,14,574.57,51.56,Appaloosa
+723,Valente_5205,2,392.64,68.65,Puro Sangue
+724,Espartano_4948,8,493.04,63.55,Quarto de Milha
+725,Relampago_3079,3,488.71,66.44,Paint Horse
+726,Estrela_6343,4,473.61,70.92,Appaloosa
+727,Valente_9818,2,474.76,46.37,Crioulo
+728,Pegasus_7277,6,577.71,49.26,Paint Horse
+729,Galante_7367,15,472.06,50.95,Crioulo
+730,Ventania_7771,10,573.73,58.4,Puro Sangue
+731,Atlas_7097,10,365.98,40.1,Paint Horse
+732,Atlas_3738,11,494.62,47.98,Puro Sangue
+733,Valente_9236,13,538.35,62.5,Mangalarga
+734,Ventania_9862,8,593.38,43.11,Crioulo
+735,Lendario_5744,3,370.55,53.83,Crioulo
+736,Furacão_4912,15,538.09,52.55,Quarto de Milha
+737,Titan_2863,4,397.14,66.07,Quarto de Milha
+738,Trovão_6559,8,530.92,60.87,Paint Horse
+739,Atlas_1900,8,446.38,44.43,Appaloosa
+740,Galante_2495,7,598.42,53.62,Appaloosa
+741,Titan_9872,12,467.93,71.29,Quarto de Milha
+742,Raio_2698,6,353.1,68.56,Campolina
+743,Veloz_4375,9,455.01,48.86,Quarto de Milha
+744,Cometa_2613,14,596.03,65.58,Mangalarga
+745,Lendario_1051,15,503.66,47.84,Quarto de Milha
+746,Lendario_2870,8,576.33,68.85,Appaloosa
+747,Valente_4312,7,458.68,60.77,Quarto de Milha
+748,Trovão_1049,4,503.17,66.41,Crioulo
+749,Galante_9396,5,376.84,58.16,Appaloosa
+750,Apollo_3221,7,510.09,40.97,Quarto de Milha
+751,Cometa_6845,6,432.63,47.12,Mangalarga
+752,Sombra_5075,9,458.52,59.68,Paint Horse
+753,Veloz_2360,3,576.7,56.92,Appaloosa
+754,Apollo_906,2,387.37,67.51,Quarto de Milha
+755,Dominante_7558,6,486.47,66.71,Appaloosa
+756,Galante_5987,12,475.72,47.15,Puro Sangue
+757,Lendario_9341,12,383.65,49.6,Mangalarga
+758,Veloz_548,15,568.02,71.32,Campolina
+759,Relampago_802,4,419.37,48.31,Crioulo
+760,Furacão_1259,5,532.47,73.5,Mangalarga
+761,Furacão_4597,4,382.08,73.61,Campolina
+762,Pegasus_1287,10,520.76,73.92,Crioulo
+763,Relampago_7272,2,529.86,72.62,Crioulo
+764,Raio_3298,3,372.22,47.5,Mangalarga
+765,Tempestade_4646,4,516.17,64.19,Appaloosa
+766,Mustang_687,9,447.02,43.9,Crioulo
+767,Trovão_2151,10,448.6,52.44,Puro Sangue
+768,Galante_1788,10,544.48,46.94,Crioulo
+769,Dominante_2333,6,532.24,50.51,Crioulo
+770,Relampago_8783,11,485.26,55.11,Campolina
+771,Galante_5121,6,595.09,71.4,Quarto de Milha
+772,Ventania_5821,13,513.26,45.01,Quarto de Milha
+773,Titan_6541,7,439.88,64.35,Campolina
+774,Atlas_2412,12,417.0,46.98,Appaloosa
+775,Espartano_3421,2,537.45,74.53,Mangalarga
+776,Sombra_1801,5,511.74,48.91,Quarto de Milha
+777,Lendario_3337,12,490.42,49.24,Puro Sangue
+778,Pegasus_5848,5,375.3,67.29,Mangalarga
+779,Dominante_7076,11,549.26,54.77,Crioulo
+780,Tempestade_1823,8,382.6,41.32,Crioulo
+781,Valente_6812,5,472.63,62.3,Appaloosa
+782,Atlas_9442,5,468.93,56.98,Mangalarga
+783,Veloz_5742,14,424.96,72.35,Mangalarga
+784,Cometa_6637,13,545.85,65.52,Quarto de Milha
+785,Veloz_1966,5,539.38,73.3,Mangalarga
+786,Tempestade_8308,7,418.86,73.26,Paint Horse
+787,Valente_4320,12,589.01,57.4,Mangalarga
+788,Ventania_8210,15,587.09,59.1,Campolina
+789,Apollo_6014,12,359.34,66.27,Puro Sangue
+790,Dominante_5181,12,396.1,60.59,Puro Sangue
+791,Pegasus_1726,3,551.25,57.38,Appaloosa
+792,Ventania_4646,3,419.66,40.07,Puro Sangue
+793,Relampago_4345,6,487.88,65.28,Campolina
+794,Valente_1768,14,566.5,69.34,Paint Horse
+795,Mustang_4574,7,362.42,45.66,Mangalarga
+796,Tempestade_1683,13,438.57,42.44,Crioulo
+797,Ventania_3154,2,414.41,74.14,Paint Horse
+798,Raio_2553,12,507.75,62.61,Campolina
+799,Raio_7380,11,382.97,74.96,Crioulo
+800,Apollo_5848,5,533.59,70.09,Mangalarga
+801,Furacão_5659,2,415.54,67.66,Quarto de Milha
+802,Valente_8849,4,383.01,69.75,Crioulo
+803,Ventania_9884,15,589.2,44.58,Appaloosa
+804,Estrela_9114,8,532.54,59.63,Crioulo
+805,Atlas_5337,11,494.96,50.55,Mangalarga
+806,Ventania_5429,10,569.72,49.97,Crioulo
+807,Relampago_9002,14,508.7,58.96,Mangalarga
+808,Sombra_2233,13,438.68,50.79,Appaloosa
+809,Tempestade_2289,15,415.06,70.02,Puro Sangue
+810,Veloz_430,10,383.7,68.73,Paint Horse
+811,Raio_7096,15,374.84,52.12,Campolina
+812,Titan_5106,5,461.9,68.19,Appaloosa
+813,Tempestade_4060,10,373.68,60.97,Appaloosa
+814,Trovão_8423,5,560.29,72.5,Mangalarga
+815,Apollo_2304,3,390.71,48.04,Appaloosa
+816,Lendario_2809,11,408.39,55.81,Campolina
+817,Relampago_7988,8,467.91,62.57,Puro Sangue
+818,Lendario_9699,3,571.6,67.81,Campolina
+819,Tempestade_2851,14,363.9,65.31,Appaloosa
+820,Galante_5957,8,444.12,62.92,Puro Sangue
+821,Ventania_3388,14,402.96,48.34,Paint Horse
+822,Apollo_6387,10,401.69,73.85,Puro Sangue
+823,Tempestade_3666,8,528.21,43.05,Paint Horse
+824,Titan_936,13,595.26,54.64,Campolina
+825,Veloz_330,15,394.36,58.08,Crioulo
+826,Mustang_7565,13,590.95,55.71,Campolina
+827,Galante_9441,3,586.04,56.57,Crioulo
+828,Estrela_1284,12,478.99,66.42,Paint Horse
+829,Pegasus_7135,13,493.3,61.68,Paint Horse
+830,Furacão_4955,6,441.19,65.1,Quarto de Milha
+831,Galante_7487,2,515.24,58.23,Crioulo
+832,Apollo_873,11,371.54,41.31,Crioulo
+833,Relampago_5489,14,436.26,47.64,Quarto de Milha
+834,Valente_6894,12,508.69,56.11,Campolina
+835,Mustang_167,12,474.17,57.58,Puro Sangue
+836,Relampago_4692,3,574.33,43.17,Appaloosa
+837,Estrela_4019,13,399.75,53.76,Campolina
+838,Apollo_3488,4,443.43,60.18,Mangalarga
+839,Cometa_8009,13,472.88,48.46,Quarto de Milha
+840,Galante_6009,5,467.56,73.19,Puro Sangue
+841,Estrela_1571,9,434.89,74.06,Puro Sangue
+842,Galante_3682,5,384.38,56.39,Quarto de Milha
+843,Sombra_5808,9,460.77,41.29,Paint Horse
+844,Dominante_9408,9,507.12,47.59,Appaloosa
+845,Atlas_6245,12,420.39,64.35,Campolina
+846,Raio_9147,7,420.53,64.44,Mangalarga
+847,Sombra_7952,2,543.42,49.09,Puro Sangue
+848,Estrela_4345,5,541.95,44.56,Crioulo
+849,Lendario_9560,12,430.6,74.74,Campolina
+850,Trovão_1928,3,560.32,46.72,Crioulo
+851,Trovão_8581,10,586.69,40.05,Appaloosa
+852,Apollo_4056,7,388.68,71.0,Crioulo
+853,Raio_6648,9,424.32,57.9,Crioulo
+854,Atlas_9968,14,546.09,60.46,Appaloosa
+855,Sombra_6683,11,426.01,48.08,Puro Sangue
+856,Titan_256,12,355.83,46.3,Campolina
+857,Furacão_8808,10,438.75,40.37,Appaloosa
+858,Tempestade_8114,2,368.4,72.98,Appaloosa
+859,Galante_2013,15,368.06,64.36,Puro Sangue
+860,Apollo_9101,3,563.28,66.99,Mangalarga
+861,Lendario_5435,13,574.54,44.06,Paint Horse
+862,Lendario_9452,6,433.08,64.2,Mangalarga
+863,Galante_1903,15,385.64,64.67,Mangalarga
+864,Furacão_5244,14,455.66,65.19,Paint Horse
+865,Veloz_574,12,361.08,49.25,Paint Horse
+866,Sombra_6032,4,406.26,48.26,Mangalarga
+867,Relampago_5129,12,481.13,45.75,Mangalarga
+868,Furacão_835,3,490.58,51.73,Puro Sangue
+869,Galante_5233,4,496.51,62.46,Quarto de Milha
+870,Galante_5080,13,500.09,57.72,Paint Horse
+871,Titan_1723,10,413.71,74.14,Puro Sangue
+872,Valente_6708,2,396.24,66.03,Quarto de Milha
+873,Titan_429,9,427.72,65.06,Crioulo
+874,Valente_4911,6,383.7,41.11,Crioulo
+875,Mustang_8146,13,592.27,41.4,Mangalarga
+876,Veloz_7978,2,448.03,40.49,Appaloosa
+877,Veloz_8492,11,414.03,70.49,Paint Horse
+878,Titan_1293,3,440.17,65.94,Campolina
+879,Estrela_2728,6,543.69,40.44,Puro Sangue
+880,Trovão_8005,4,583.95,57.12,Mangalarga
+881,Lendario_7277,14,374.06,68.71,Mangalarga
+882,Sombra_8289,4,599.6,50.63,Paint Horse
+883,Tempestade_603,8,500.0,55.27,Puro Sangue
+884,Dominante_1403,14,478.52,48.5,Appaloosa
+885,Tempestade_3130,5,487.53,50.24,Crioulo
+886,Sombra_9751,14,573.38,44.12,Mangalarga
+887,Relampago_6705,9,457.78,71.0,Mangalarga
+888,Pegasus_4792,9,485.99,45.82,Paint Horse
+889,Apollo_6449,13,361.57,59.39,Crioulo
+890,Galante_8371,3,516.39,59.26,Appaloosa
+891,Atlas_3342,5,556.28,43.81,Paint Horse
+892,Tempestade_5666,10,594.54,49.5,Appaloosa
+893,Furacão_8910,4,522.0,52.39,Crioulo
+894,Espartano_5336,5,480.71,53.49,Puro Sangue
+895,Raio_1528,4,482.35,43.53,Quarto de Milha
+896,Raio_1798,14,559.79,48.54,Puro Sangue
+897,Dominante_82,2,452.13,46.06,Appaloosa
+898,Pegasus_1781,4,570.53,64.6,Paint Horse
+899,Tempestade_5948,13,406.15,48.43,Appaloosa
+900,Estrela_9994,3,453.21,50.82,Puro Sangue
+901,Apollo_3197,5,433.95,65.66,Mangalarga
+902,Galante_174,2,396.08,54.41,Mangalarga
+903,Trovão_3810,6,529.83,69.54,Crioulo
+904,Estrela_4544,7,464.15,42.49,Mangalarga
+905,Estrela_8402,12,394.77,51.82,Appaloosa
+906,Galante_1184,15,572.51,74.03,Crioulo
+907,Cometa_5653,7,552.65,63.3,Crioulo
+908,Relampago_5891,11,387.32,53.06,Appaloosa
+909,Espartano_682,13,541.32,55.49,Appaloosa
+910,Dominante_1448,7,430.61,59.83,Appaloosa
+911,Mustang_7657,11,549.84,44.09,Puro Sangue
+912,Raio_6425,3,597.05,65.81,Campolina
+913,Pegasus_3238,7,446.47,50.55,Appaloosa
+914,Furacão_7530,12,368.17,70.01,Puro Sangue
+915,Trovão_892,8,403.42,61.0,Paint Horse
+916,Atlas_9779,2,461.09,67.13,Paint Horse
+917,Mustang_6328,5,545.08,74.26,Campolina
+918,Raio_443,9,392.61,61.83,Paint Horse
+919,Titan_6472,7,374.42,68.42,Appaloosa
+920,Pegasus_1178,14,352.61,68.77,Campolina
+921,Mustang_6568,2,487.11,65.74,Campolina
+922,Trovão_8678,12,460.1,64.61,Paint Horse
+923,Raio_9828,4,597.31,73.53,Puro Sangue
+924,Ventania_7779,5,588.58,72.03,Appaloosa
+925,Raio_4430,9,505.06,73.85,Paint Horse
+926,Sombra_4697,10,415.38,50.12,Paint Horse
+927,Ventania_5355,12,378.06,61.53,Campolina
+928,Espartano_6310,2,541.13,52.08,Crioulo
+929,Veloz_2421,12,495.97,48.72,Puro Sangue
+930,Sombra_587,2,422.14,59.76,Paint Horse
+931,Valente_3311,11,585.87,68.23,Crioulo
+932,Valente_1296,12,409.71,54.84,Appaloosa
+933,Valente_7101,3,572.34,58.44,Appaloosa
+934,Lendario_3751,11,520.25,49.95,Campolina
+935,Sombra_9470,15,512.13,68.88,Crioulo
+936,Ventania_570,10,487.51,50.91,Crioulo
+937,Cometa_5921,7,363.51,57.07,Quarto de Milha
+938,Ventania_9636,12,490.26,41.39,Crioulo
+939,Titan_7940,10,553.74,72.6,Puro Sangue
+940,Trovão_8989,9,580.82,48.4,Mangalarga
+941,Cometa_883,10,396.77,54.5,Appaloosa
+942,Furacão_16,13,391.6,52.71,Campolina
+943,Atlas_7025,5,398.85,74.21,Quarto de Milha
+944,Pegasus_5756,11,485.33,59.67,Appaloosa
+945,Trovão_6438,4,394.16,74.02,Paint Horse
+946,Espartano_7073,12,420.03,44.3,Paint Horse
+947,Atlas_4843,6,484.32,58.45,Mangalarga
+948,Estrela_8408,4,540.93,47.95,Appaloosa
+949,Sombra_265,10,534.09,68.54,Quarto de Milha
+950,Apollo_8155,14,455.53,41.34,Puro Sangue
+951,Raio_6313,5,374.39,71.18,Quarto de Milha
+952,Pegasus_1779,8,462.8,57.6,Campolina
+953,Apollo_3635,12,503.53,42.34,Paint Horse
+954,Dominante_3007,10,469.57,40.06,Quarto de Milha
+955,Lendario_5253,6,434.11,61.45,Campolina
+956,Pegasus_6779,4,475.44,44.89,Paint Horse
+957,Apollo_3504,2,534.62,64.37,Crioulo
+958,Titan_5361,8,448.21,62.29,Quarto de Milha
+959,Galante_7494,8,570.06,42.33,Puro Sangue
+960,Veloz_1694,15,553.45,62.27,Mangalarga
+961,Atlas_496,7,535.98,73.94,Appaloosa
+962,Trovão_9523,14,501.5,48.7,Paint Horse
+963,Atlas_6809,14,449.36,54.52,Quarto de Milha
+964,Furacão_9421,3,375.3,68.28,Quarto de Milha
+965,Relampago_3089,12,488.07,58.74,Puro Sangue
+966,Titan_9351,10,587.51,52.06,Appaloosa
+967,Furacão_5192,13,493.81,69.76,Quarto de Milha
+968,Tempestade_5638,11,582.07,70.25,Mangalarga
+969,Galante_5815,8,432.35,64.33,Quarto de Milha
+970,Tempestade_4545,14,386.24,41.86,Paint Horse
+971,Atlas_4254,3,502.41,70.57,Quarto de Milha
+972,Titan_7166,9,461.54,49.63,Crioulo
+973,Tempestade_1216,13,352.21,71.51,Campolina
+974,Valente_3525,10,523.11,73.09,Paint Horse
+975,Raio_5921,5,391.12,65.8,Appaloosa
+976,Raio_9699,13,488.67,48.49,Crioulo
+977,Furacão_1140,2,584.64,55.71,Crioulo
+978,Espartano_2142,11,399.27,44.84,Appaloosa
+979,Pegasus_1672,5,403.73,73.34,Campolina
+980,Pegasus_5838,6,493.47,57.71,Appaloosa
+981,Estrela_2426,11,382.87,51.92,Mangalarga
+982,Cometa_4544,9,592.18,59.34,Appaloosa
+983,Sombra_3818,11,540.48,72.06,Crioulo
+984,Trovão_1651,14,527.65,43.88,Mangalarga
+985,Pegasus_3882,6,462.23,49.44,Paint Horse
+986,Veloz_9932,11,571.3,61.87,Campolina
+987,Lendario_3666,11,444.55,62.13,Mangalarga
+988,Sombra_6059,14,534.13,63.89,Appaloosa
+989,Apollo_5794,15,370.89,61.08,Paint Horse
+990,Atlas_9179,6,496.33,57.2,Paint Horse
+991,Atlas_8758,6,514.02,56.65,Appaloosa
+992,Ventania_1524,6,572.75,50.69,Mangalarga
+993,Lendario_9425,14,453.47,45.53,Quarto de Milha
+994,Mustang_9344,13,433.93,49.6,Campolina
+995,Galante_8210,8,401.52,57.06,Crioulo
+996,Furacão_7335,9,481.25,54.11,Puro Sangue
+997,Tempestade_7909,2,464.91,50.55,Puro Sangue
+998,Atlas_6641,7,591.92,44.36,Appaloosa
+999,Furacão_8633,14,553.71,50.85,Appaloosa
+1000,Lendario_9555,3,535.98,72.8,Puro Sangue

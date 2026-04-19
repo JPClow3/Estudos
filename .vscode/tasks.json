@@ -1,0 +1,59 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compile - POO Atividade 13.03",
+      "type": "shell",
+      "command": "javac -d target/classes src/main/java/org/poo/*.java",
+      "options": {
+        "cwd": "${workspaceFolder}/Programacao orientada a Objeto/Atividade avaliativa 13.03"
+      },
+      "group": "build"
+    },
+    {
+      "label": "Compile - POO Atividade 20.02",
+      "type": "shell",
+      "command": "javac *.java",
+      "options": {
+        "cwd": "${workspaceFolder}/Programacao orientada a Objeto/Atividade avaliativa 20.02/src"
+      },
+      "group": "build"
+    },
+    {
+      "label": "Compile - POO Atividade 28.03",
+      "type": "shell",
+      "command": "javac -d . poo/atv2803/*.java",
+      "options": {
+        "cwd": "${workspaceFolder}/Programacao orientada a Objeto/Atividade avaliativa 28.03/src"
+      },
+      "group": "build"
+    },
+    {
+      "label": "Compile - POO N1",
+      "type": "shell",
+      "command": "javac -d . *.java",
+      "options": {
+        "cwd": "${workspaceFolder}/Programacao orientada a Objeto/N1"
+      },
+      "group": "build"
+    },
+    {
+      "label": "Compile - Recursivos Atv 23-09",
+      "type": "shell",
+      "command": "javac *.java",
+      "options": {
+        "cwd": "${workspaceFolder}/Algo recursivos e funcionais/Atv 23-09/main/src"
+      },
+      "group": "build"
+    },
+    {
+      "label": "Compile - Recursivos Atv 25-09",
+      "type": "shell",
+      "command": "javac *.java",
+      "options": {
+        "cwd": "${workspaceFolder}/Algo recursivos e funcionais/Atv 25-09/ATV 25-09/src"
+      },
+      "group": "build"
+    }
+  ]
+}

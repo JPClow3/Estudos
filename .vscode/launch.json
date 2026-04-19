@@ -1,0 +1,71 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Run - POO Atividade 13.03",
+      "request": "launch",
+      "mainClass": "org.poo.Main",
+      "cwd": "${workspaceFolder}/Programacao orientada a Objeto/Atividade avaliativa 13.03",
+      "classPaths": [
+        "${workspaceFolder}/Programacao orientada a Objeto/Atividade avaliativa 13.03/target/classes"
+      ],
+      "preLaunchTask": "Compile - POO Atividade 13.03"
+    },
+    {
+      "type": "java",
+      "name": "Run - POO Atividade 20.02",
+      "request": "launch",
+      "mainClass": "Main",
+      "cwd": "${workspaceFolder}/Programacao orientada a Objeto/Atividade avaliativa 20.02/src",
+      "classPaths": [
+        "${workspaceFolder}/Programacao orientada a Objeto/Atividade avaliativa 20.02/src"
+      ],
+      "preLaunchTask": "Compile - POO Atividade 20.02"
+    },
+    {
+      "type": "java",
+      "name": "Run - POO Atividade 28.03",
+      "request": "launch",
+      "mainClass": "poo.atv2803.Main",
+      "cwd": "${workspaceFolder}/Programacao orientada a Objeto/Atividade avaliativa 28.03/src",
+      "classPaths": [
+        "${workspaceFolder}/Programacao orientada a Objeto/Atividade avaliativa 28.03/src"
+      ],
+      "preLaunchTask": "Compile - POO Atividade 28.03"
+    },
+    {
+      "type": "java",
+      "name": "Run - POO N1",
+      "request": "launch",
+      "mainClass": "org.poo.Main",
+      "cwd": "${workspaceFolder}/Programacao orientada a Objeto/N1",
+      "classPaths": [
+        "${workspaceFolder}/Programacao orientada a Objeto/N1"
+      ],
+      "preLaunchTask": "Compile - POO N1"
+    },
+    {
+      "type": "java",
+      "name": "Run - Recursivos Atv 23-09",
+      "request": "launch",
+      "mainClass": "Main",
+      "cwd": "${workspaceFolder}/Algo recursivos e funcionais/Atv 23-09",
+      "classPaths": [
+        "${workspaceFolder}/Algo recursivos e funcionais/Atv 23-09/main/src"
+      ],
+      "preLaunchTask": "Compile - Recursivos Atv 23-09"
+    },
+    {
+      "type": "java",
+      "name": "Run - Recursivos Atv 25-09",
+      "request": "launch",
+      "mainClass": "Main",
+      "cwd": "${workspaceFolder}/Algo recursivos e funcionais/Atv 25-09/ATV 25-09",
+      "classPaths": [
+        "${workspaceFolder}/Algo recursivos e funcionais/Atv 25-09/ATV 25-09/src"
+      ],
+      "preLaunchTask": "Compile - Recursivos Atv 25-09"
+    }
+  ]
+}
