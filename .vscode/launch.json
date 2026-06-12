@@ -73,6 +73,17 @@
         "${workspaceFolder}/Algo recursivos e funcionais/Atv 25-09/ATV 25-09/src"
       ],
       "preLaunchTask": "Compile - Recursivos Atv 25-09"
+    },
+    {
+      "type": "java",
+      "name": "Run - POO N2",
+      "request": "launch",
+      "mainClass": "Main",
+      "cwd": "${workspaceFolder}/Programacao orientada a Objeto/N2",
+      "classPaths": [
+        "${workspaceFolder}/Programacao orientada a Objeto/N2/bin"
+      ],
+      "preLaunchTask": "Compile - POO N2"
     }
   ]
 }

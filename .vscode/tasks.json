@@ -54,6 +54,15 @@
         "cwd": "${workspaceFolder}/Algo recursivos e funcionais/Atv 25-09/ATV 25-09/src"
       },
       "group": "build"
+    },
+    {
+      "label": "Compile - POO N2",
+      "type": "shell",
+      "command": "cmd /c \"if not exist bin mkdir bin && javac -d bin -sourcepath src src/Main.java\"",
+      "options": {
+        "cwd": "${workspaceFolder}/Programacao orientada a Objeto/N2"
+      },
+      "group": "build"
     }
   ]
 }
