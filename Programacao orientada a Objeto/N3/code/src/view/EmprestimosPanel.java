@@ -10,7 +10,9 @@ import repository.ObjetoRepository;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.text.MaskFormatter;
 import java.awt.*;
+import java.text.ParseException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
@@ -19,8 +21,8 @@ import java.util.List;
 public class EmprestimosPanel extends JPanel {
     private JComboBox<ComboItem> cbObjeto;
     private JComboBox<ComboItem> cbAmigo;
-    private JTextField txtDataEmprestimo;
-    private JTextField txtDataPrevista;
+    private JFormattedTextField txtDataEmprestimo;
+    private JFormattedTextField txtDataPrevista;
     private JComboBox<String> cbStatus;
     private JTextField txtObservacoes;
     private JTable tabelaEmprestimos;
@@ -71,16 +73,21 @@ public class EmprestimosPanel extends JPanel {
 
         // Fields
         cbObjeto = new JComboBox<>();
+        cbObjeto.setFont(StyleGuide.FONTE_TEXTO);
+        
         cbAmigo = new JComboBox<>();
-        txtDataEmprestimo = new JTextField(15);
+        cbAmigo.setFont(StyleGuide.FONTE_TEXTO);
+        
+        txtDataEmprestimo = createFormattedTextField("##/##/####");
         txtDataEmprestimo.setText(LocalDate.now().format(DATE_FORMAT));
-        txtDataPrevista = new JTextField(15);
+        txtDataPrevista = createFormattedTextField("##/##/####");
         txtDataPrevista.setText(LocalDate.now().plusDays(7).format(DATE_FORMAT));
         
         String[] statusOptions = {"EMPRESTADO", "DEVOLVIDO", "ATRASADO"};
         cbStatus = new JComboBox<>(statusOptions);
+        cbStatus.setFont(StyleGuide.FONTE_TEXTO);
         
-        txtObservacoes = new JTextField(20);
+        txtObservacoes = createTextField(20);
 
         // Row 0: Objeto / Amigo
         gbc.gridx = 0; gbc.gridy = 0; gbc.weightx = 0;
@@ -338,9 +345,37 @@ public class EmprestimosPanel extends JPanel {
 
     private JLabel createLabel(String text) {
         JLabel label = new JLabel(text);
-        label.setFont(StyleGuide.FONTE_TEXTO);
+        label.setFont(StyleGuide.FONTE_LABEL);
         label.setForeground(StyleGuide.TEXTO_PRINCIPAL);
         return label;
+    }
+
+    private JTextField createTextField(int columns) {
+        JTextField textField = new JTextField(columns);
+        textField.setFont(StyleGuide.FONTE_TEXTO);
+        textField.setBorder(BorderFactory.createCompoundBorder(
+            BorderFactory.createLineBorder(Color.LIGHT_GRAY),
+            BorderFactory.createEmptyBorder(8, 10, 8, 10)
+        ));
+        return textField;
+    }
+
+    private JFormattedTextField createFormattedTextField(String mask) {
+        JFormattedTextField textField;
+        try {
+            MaskFormatter formatter = new MaskFormatter(mask);
+            formatter.setPlaceholderCharacter('_');
+            textField = new JFormattedTextField(formatter);
+        } catch (ParseException e) {
+            textField = new JFormattedTextField();
+        }
+        textField.setFont(StyleGuide.FONTE_TEXTO);
+        textField.setColumns(15);
+        textField.setBorder(BorderFactory.createCompoundBorder(
+            BorderFactory.createLineBorder(Color.LIGHT_GRAY),
+            BorderFactory.createEmptyBorder(8, 10, 8, 10)
+        ));
+        return textField;
     }
 
     private JButton createButton(String text, Color bg, Color fg) {

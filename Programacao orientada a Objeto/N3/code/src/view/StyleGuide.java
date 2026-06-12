@@ -19,7 +19,8 @@ public class StyleGuide {
     public static final Color BRANCO = Color.WHITE;
     public static final Color ZEBRA_ROW = Color.decode("#F3F4F6");
 
-    public static final Font FONTE_TITULO = new Font("SansSerif", Font.BOLD, 18);
-    public static final Font FONTE_TEXTO = new Font("SansSerif", Font.PLAIN, 14);
-    public static final Font FONTE_TABELA = new Font("SansSerif", Font.PLAIN, 12);
+    public static final Font FONTE_TITULO = new Font("Segoe UI", Font.BOLD, 22);
+    public static final Font FONTE_TEXTO = new Font("Segoe UI", Font.PLAIN, 14);
+    public static final Font FONTE_LABEL = new Font("Segoe UI", Font.BOLD, 14);
+    public static final Font FONTE_TABELA = new Font("Segoe UI", Font.PLAIN, 13);
 }

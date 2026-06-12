@@ -14,7 +14,7 @@ public class ModernTableRenderer extends DefaultTableCellRenderer {
 
         // Remove the default cell focus border which looks outdated
         if (c instanceof JComponent) {
-            ((JComponent) c).setBorder(BorderFactory.createEmptyBorder(0, 5, 0, 5));
+            ((JComponent) c).setBorder(BorderFactory.createEmptyBorder(5, 10, 5, 10));
             ((JComponent) c).setOpaque(true);
         }
 

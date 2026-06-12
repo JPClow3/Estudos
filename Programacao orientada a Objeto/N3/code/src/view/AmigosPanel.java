@@ -6,7 +6,9 @@ import repository.AmigoRepository;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.text.MaskFormatter;
 import java.awt.*;
+import java.text.ParseException;
 import java.util.List;
 
 public class AmigosPanel extends JPanel {
@@ -50,7 +52,7 @@ public class AmigosPanel extends JPanel {
 
         // Fields
         txtNome = createTextField(20);
-        txtTelefone = createTextField(20);
+        txtTelefone = createFormattedTextField("(##) #####-####");
         txtEmail = createTextField(20);
 
         // Row 0: Nome
@@ -222,16 +224,35 @@ public class AmigosPanel extends JPanel {
 
     private JLabel createLabel(String text) {
         JLabel label = new JLabel(text);
-        label.setFont(StyleGuide.FONTE_TEXTO);
+        label.setFont(StyleGuide.FONTE_LABEL);
         label.setForeground(StyleGuide.TEXTO_PRINCIPAL);
         return label;
     }
 
     private JTextField createTextField(int columns) {
         JTextField textField = new JTextField(columns);
+        textField.setFont(StyleGuide.FONTE_TEXTO);
         textField.setBorder(BorderFactory.createCompoundBorder(
             BorderFactory.createLineBorder(Color.LIGHT_GRAY),
-            BorderFactory.createEmptyBorder(5, 5, 5, 5)
+            BorderFactory.createEmptyBorder(8, 10, 8, 10)
+        ));
+        return textField;
+    }
+
+    private JFormattedTextField createFormattedTextField(String mask) {
+        JFormattedTextField textField;
+        try {
+            MaskFormatter formatter = new MaskFormatter(mask);
+            formatter.setPlaceholderCharacter('_');
+            textField = new JFormattedTextField(formatter);
+        } catch (ParseException e) {
+            textField = new JFormattedTextField();
+        }
+        textField.setFont(StyleGuide.FONTE_TEXTO);
+        textField.setColumns(20);
+        textField.setBorder(BorderFactory.createCompoundBorder(
+            BorderFactory.createLineBorder(Color.LIGHT_GRAY),
+            BorderFactory.createEmptyBorder(8, 10, 8, 10)
         ));
         return textField;
     }

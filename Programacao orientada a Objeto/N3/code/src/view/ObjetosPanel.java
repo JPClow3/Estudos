@@ -279,16 +279,17 @@ public class ObjetosPanel extends JPanel {
 
     private JLabel createLabel(String text) {
         JLabel label = new JLabel(text);
-        label.setFont(StyleGuide.FONTE_TEXTO);
+        label.setFont(StyleGuide.FONTE_LABEL);
         label.setForeground(StyleGuide.TEXTO_PRINCIPAL);
         return label;
     }
 
     private JTextField createTextField(int columns) {
         JTextField textField = new JTextField(columns);
+        textField.setFont(StyleGuide.FONTE_TEXTO);
         textField.setBorder(BorderFactory.createCompoundBorder(
             BorderFactory.createLineBorder(Color.LIGHT_GRAY),
-            BorderFactory.createEmptyBorder(5, 5, 5, 5)
+            BorderFactory.createEmptyBorder(8, 10, 8, 10)
         ));
         return textField;
     }
