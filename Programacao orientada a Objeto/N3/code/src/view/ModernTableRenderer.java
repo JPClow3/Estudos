@@ -5,6 +5,7 @@ import javax.swing.table.DefaultTableCellRenderer;
 import java.awt.*;
 
 public class ModernTableRenderer extends DefaultTableCellRenderer {
+    private static final long serialVersionUID = 1L;
     @Override
     public Component getTableCellRendererComponent(JTable table, Object value,
                                                    boolean isSelected, boolean hasFocus,

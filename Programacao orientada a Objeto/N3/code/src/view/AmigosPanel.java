@@ -2,6 +2,8 @@ package view;
 
 import model.Amigo;
 import repository.AmigoRepository;
+import service.LoanService;
+import service.ValidationUtils;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -11,18 +13,22 @@ import java.awt.*;
 import java.text.ParseException;
 import java.util.List;
 
+@SuppressWarnings({"serial", "this-escape"})
 public class AmigosPanel extends JPanel {
+    private static final long serialVersionUID = 1L;
     private JTextField txtNome;
     private JTextField txtTelefone;
     private JTextField txtEmail;
     private JTable tabelaAmigos;
     private DefaultTableModel tableModel;
     
-    private AmigoRepository amigoRepository;
+    private final AmigoRepository amigoRepository;
+    private final LoanService loanService;
     private Integer selectedId = null;
 
-    public AmigosPanel(AmigoRepository amigoRepository) {
+    public AmigosPanel(AmigoRepository amigoRepository, LoanService loanService) {
         this.amigoRepository = amigoRepository;
+        this.loanService = loanService;
         setLayout(new BorderLayout(10, 10));
         setBackground(StyleGuide.FUNDO_PRINCIPAL);
         setBorder(new EmptyBorder(15, 15, 15, 15));
@@ -54,6 +60,9 @@ public class AmigosPanel extends JPanel {
         txtNome = createTextField(20);
         txtTelefone = createFormattedTextField("(##) #####-####");
         txtEmail = createTextField(20);
+        lblNome.setLabelFor(txtNome);
+        lblTelefone.setLabelFor(txtTelefone);
+        lblEmail.setLabelFor(txtEmail);
 
         // Row 0: Nome
         gbc.gridx = 0; gbc.gridy = 0; gbc.weightx = 0;
@@ -114,8 +123,7 @@ public class AmigosPanel extends JPanel {
         tabelaAmigos.setFont(StyleGuide.FONTE_TABELA);
         tabelaAmigos.setRowHeight(30);
         tabelaAmigos.getTableHeader().setFont(StyleGuide.FONTE_TEXTO);
-        tabelaAmigos.getTableHeader().setBackground(StyleGuide.COR_PRIMARIA);
-        tabelaAmigos.getTableHeader().setForeground(StyleGuide.BRANCO);
+        tabelaAmigos.getTableHeader().setDefaultRenderer(new ModernTableHeaderRenderer());
         tabelaAmigos.setDefaultRenderer(Object.class, new ModernTableRenderer());
         tabelaAmigos.setShowGrid(false);
         tabelaAmigos.setIntercellSpacing(new Dimension(0, 0));
@@ -133,6 +141,7 @@ public class AmigosPanel extends JPanel {
 
         JScrollPane scrollPane = new JScrollPane(tabelaAmigos);
         scrollPane.getViewport().setBackground(StyleGuide.FUNDO_PRINCIPAL);
+        scrollPane.setMinimumSize(new Dimension(0, 100));
         
         return scrollPane;
     }
@@ -142,48 +151,47 @@ public class AmigosPanel extends JPanel {
     }
     
     private void carregarDados() {
-        tableModel.setRowCount(0);
-        List<Amigo> amigos = amigoRepository.listar();
-        for (Amigo amigo : amigos) {
-            tableModel.addRow(new Object[]{
-                amigo.getId(),
-                amigo.getNome(),
-                amigo.getTelefone(),
-                amigo.getEmail()
-            });
+        try {
+            tableModel.setRowCount(0);
+            List<Amigo> amigos = amigoRepository.listar();
+            for (Amigo amigo : amigos) {
+                tableModel.addRow(new Object[]{
+                    amigo.getId(),
+                    amigo.getNome(),
+                    amigo.getTelefone(),
+                    amigo.getEmail()
+                });
+            }
+            limparFormulario();
+        } catch (RuntimeException exception) {
+            showError(exception);
         }
-        limparFormulario();
     }
     
     private void salvarAmigo() {
-        String nome = txtNome.getText().trim();
-        String telefone = txtTelefone.getText().trim();
-        String email = txtEmail.getText().trim();
-        
-        if (nome.isEmpty() || telefone.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Nome e Telefone são obrigatórios.", "Erro", JOptionPane.ERROR_MESSAGE);
-            return;
-        }
-        
-        List<Amigo> amigos = amigoRepository.listar();
-        
-        if (selectedId == null) {
-            // Novo amigo
-            int novoId = amigoRepository.proximoId();
-            amigos.add(new Amigo(novoId, nome, telefone, email));
-        } else {
-            // Atualizar amigo existente
-            for (int i = 0; i < amigos.size(); i++) {
-                if (amigos.get(i).getId() == selectedId) {
-                    amigos.set(i, new Amigo(selectedId, nome, telefone, email));
-                    break;
+        try {
+            String nome = ValidationUtils.requireSafeText("Nome", txtNome.getText(), true);
+            String telefone = ValidationUtils.requireSafeText("Telefone", txtTelefone.getText(), false);
+            String email = ValidationUtils.requireSafeText("E-mail", txtEmail.getText(), false);
+            ValidationUtils.validateContact(telefone, email);
+            List<Amigo> amigos = amigoRepository.listar();
+
+            if (selectedId == null) {
+                amigos.add(new Amigo(amigoRepository.proximoId(), nome, telefone, email));
+            } else {
+                for (int i = 0; i < amigos.size(); i++) {
+                    if (amigos.get(i).getId() == selectedId) {
+                        amigos.set(i, new Amigo(selectedId, nome, telefone, email));
+                        break;
+                    }
                 }
             }
+            amigoRepository.salvarTodos(amigos);
+            carregarDados();
+            JOptionPane.showMessageDialog(this, "Amigo salvo com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+        } catch (RuntimeException exception) {
+            showError(exception);
         }
-        
-        amigoRepository.salvarTodos(amigos);
-        carregarDados();
-        JOptionPane.showMessageDialog(this, "Amigo salvo com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
     }
     
     private void editarAmigo() {
@@ -206,11 +214,20 @@ public class AmigosPanel extends JPanel {
         
         int confirm = JOptionPane.showConfirmDialog(this, "Tem certeza que deseja excluir este amigo?", "Confirmar Exclusão", JOptionPane.YES_NO_OPTION);
         if (confirm == JOptionPane.YES_OPTION) {
-            List<Amigo> amigos = amigoRepository.listar();
-            amigos.removeIf(a -> a.getId() == selectedId);
-            amigoRepository.salvarTodos(amigos);
-            carregarDados();
-            JOptionPane.showMessageDialog(this, "Amigo excluído com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+            try {
+                if (loanService.amigoPossuiHistorico(selectedId)) {
+                    throw new IllegalArgumentException(
+                            "Este amigo não pode ser excluído porque existe no histórico de empréstimos."
+                    );
+                }
+                List<Amigo> amigos = amigoRepository.listar();
+                amigos.removeIf(a -> a.getId() == selectedId);
+                amigoRepository.salvarTodos(amigos);
+                carregarDados();
+                JOptionPane.showMessageDialog(this, "Amigo excluído com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+            } catch (RuntimeException exception) {
+                showError(exception);
+            }
         }
     }
     
@@ -259,5 +276,9 @@ public class AmigosPanel extends JPanel {
 
     private JButton createButton(String text, Color bg, Color hoverBg, Color fg) {
         return new ModernButton(text, bg, hoverBg, fg);
+    }
+
+    private void showError(RuntimeException exception) {
+        JOptionPane.showMessageDialog(this, exception.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
     }
 }

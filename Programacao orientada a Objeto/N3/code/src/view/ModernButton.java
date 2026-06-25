@@ -5,7 +5,9 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+@SuppressWarnings("this-escape")
 public class ModernButton extends JButton {
+    private static final long serialVersionUID = 1L;
     private Color defaultBackgroundColor;
     private Color hoverBackgroundColor;
 

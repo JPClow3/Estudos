@@ -23,8 +23,12 @@ import javax.swing.table.DefaultTableModel;
 
 import model.Objeto;
 import repository.ObjetoRepository;
+import service.LoanService;
+import service.ValidationUtils;
 
+@SuppressWarnings({"serial", "this-escape"})
 public class ObjetosPanel extends JPanel {
+    private static final long serialVersionUID = 1L;
     private JTextField txtNome;
     private JTextField txtCategoria;
     private JTextField txtDescricao;
@@ -33,11 +37,13 @@ public class ObjetosPanel extends JPanel {
     private JTable tabelaObjetos;
     private DefaultTableModel tableModel;
     
-    private ObjetoRepository objetoRepository;
+    private final ObjetoRepository objetoRepository;
+    private final LoanService loanService;
     private Integer selectedId = null;
 
-    public ObjetosPanel(ObjetoRepository objetoRepository) {
+    public ObjetosPanel(ObjetoRepository objetoRepository, LoanService loanService) {
         this.objetoRepository = objetoRepository;
+        this.loanService = loanService;
         setLayout(new BorderLayout(10, 10));
         setBackground(StyleGuide.FUNDO_PRINCIPAL);
         setBorder(new EmptyBorder(15, 15, 15, 15));
@@ -58,7 +64,7 @@ public class ObjetosPanel extends JPanel {
         formPanel.setBackground(StyleGuide.FUNDO_PRINCIPAL);
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.insets = new Insets(10, 10, 10, 10);
+        gbc.insets = new Insets(6, 10, 6, 10);
 
         // Labels
         JLabel lblNome = createLabel("Nome:");
@@ -76,33 +82,33 @@ public class ObjetosPanel extends JPanel {
         chkDisponivel.setFont(StyleGuide.FONTE_TEXTO);
         chkDisponivel.setForeground(StyleGuide.TEXTO_PRINCIPAL);
         chkDisponivel.setSelected(true);
+        lblNome.setLabelFor(txtNome);
+        lblCategoria.setLabelFor(txtCategoria);
+        lblDescricao.setLabelFor(txtDescricao);
+        lblValor.setLabelFor(txtValor);
 
-        // Row 0: Nome
+        // Row 0: Nome / Categoria
         gbc.gridx = 0; gbc.gridy = 0; gbc.weightx = 0;
         formPanel.add(lblNome, gbc);
         gbc.gridx = 1; gbc.gridy = 0; gbc.weightx = 1;
         formPanel.add(txtNome, gbc);
-
-        // Row 1: Categoria
-        gbc.gridx = 0; gbc.gridy = 1; gbc.weightx = 0;
+        gbc.gridx = 2; gbc.gridy = 0; gbc.weightx = 0;
         formPanel.add(lblCategoria, gbc);
-        gbc.gridx = 1; gbc.gridy = 1; gbc.weightx = 1;
+        gbc.gridx = 3; gbc.gridy = 0; gbc.weightx = 1;
         formPanel.add(txtCategoria, gbc);
 
-        // Row 2: Descricao
-        gbc.gridx = 0; gbc.gridy = 2; gbc.weightx = 0;
+        // Row 1: Descrição / Valor
+        gbc.gridx = 0; gbc.gridy = 1; gbc.weightx = 0;
         formPanel.add(lblDescricao, gbc);
-        gbc.gridx = 1; gbc.gridy = 2; gbc.weightx = 1;
+        gbc.gridx = 1; gbc.gridy = 1; gbc.weightx = 1;
         formPanel.add(txtDescricao, gbc);
-
-        // Row 3: Valor
-        gbc.gridx = 0; gbc.gridy = 3; gbc.weightx = 0;
+        gbc.gridx = 2; gbc.gridy = 1; gbc.weightx = 0;
         formPanel.add(lblValor, gbc);
-        gbc.gridx = 1; gbc.gridy = 3; gbc.weightx = 1;
+        gbc.gridx = 3; gbc.gridy = 1; gbc.weightx = 1;
         formPanel.add(txtValor, gbc);
 
-        // Row 4: Disponivel
-        gbc.gridx = 1; gbc.gridy = 4; gbc.weightx = 1;
+        // Row 2: Disponível
+        gbc.gridx = 1; gbc.gridy = 2; gbc.gridwidth = 3; gbc.weightx = 1;
         formPanel.add(chkDisponivel, gbc);
 
         return formPanel;
@@ -146,8 +152,7 @@ public class ObjetosPanel extends JPanel {
         tabelaObjetos.setFont(StyleGuide.FONTE_TABELA);
         tabelaObjetos.setRowHeight(30);
         tabelaObjetos.getTableHeader().setFont(StyleGuide.FONTE_TEXTO);
-        tabelaObjetos.getTableHeader().setBackground(StyleGuide.COR_PRIMARIA);
-        tabelaObjetos.getTableHeader().setForeground(StyleGuide.BRANCO);
+        tabelaObjetos.getTableHeader().setDefaultRenderer(new ModernTableHeaderRenderer());
         tabelaObjetos.setDefaultRenderer(Object.class, new ModernTableRenderer());
         tabelaObjetos.setShowGrid(false);
         tabelaObjetos.setIntercellSpacing(new Dimension(0, 0));
@@ -165,6 +170,8 @@ public class ObjetosPanel extends JPanel {
 
         JScrollPane scrollPane = new JScrollPane(tabelaObjetos);
         scrollPane.getViewport().setBackground(StyleGuide.FUNDO_PRINCIPAL);
+        scrollPane.setMinimumSize(new Dimension(0, 100));
+        scrollPane.setPreferredSize(new Dimension(700, 170));
         
         return scrollPane;
     }
@@ -174,61 +181,56 @@ public class ObjetosPanel extends JPanel {
     }
     
     private void carregarDados() {
-        tableModel.setRowCount(0);
-        List<Objeto> objetos = objetoRepository.listar();
-        for (Objeto obj : objetos) {
-            tableModel.addRow(new Object[]{
-                obj.getId(),
-                obj.getNome(),
-                obj.getCategoria(),
-                String.format("R$ %.2f", obj.getValor()),
-                obj.isDisponivel() ? "Sim" : "Não"
-            });
+        try {
+            tableModel.setRowCount(0);
+            List<Objeto> objetos = objetoRepository.listar();
+            for (Objeto obj : objetos) {
+                tableModel.addRow(new Object[]{
+                    obj.getId(),
+                    obj.getNome(),
+                    obj.getCategoria(),
+                    String.format("R$ %.2f", obj.getValor()),
+                    obj.isDisponivel() ? "Sim" : "Não"
+                });
+            }
+            limparFormulario();
+        } catch (RuntimeException exception) {
+            showError(exception);
         }
-        limparFormulario();
     }
     
     private void salvarObjeto() {
-        String nome = txtNome.getText().trim();
-        String categoria = txtCategoria.getText().trim();
-        String descricao = txtDescricao.getText().trim();
-        boolean disponivel = chkDisponivel.isSelected();
-        
-        if (nome.isEmpty() || categoria.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Nome e Categoria são obrigatórios.", "Erro", JOptionPane.ERROR_MESSAGE);
-            return;
-        }
-
-        Double valor = 0.0;
         try {
-            String valorTxt = txtValor.getText().trim().replace(",", ".");
-            if (!valorTxt.isEmpty()) {
-                valor = Double.parseDouble(valorTxt);
+            String nome = ValidationUtils.requireSafeText("Nome", txtNome.getText(), true);
+            String categoria = ValidationUtils.requireSafeText("Categoria", txtCategoria.getText(), true);
+            String descricao = ValidationUtils.requireSafeText("Descrição", txtDescricao.getText(), false);
+            double valor = ValidationUtils.parseNonNegativeFinite("Valor", txtValor.getText());
+            boolean disponivel = chkDisponivel.isSelected();
+            if (selectedId != null && disponivel && loanService.objetoPossuiEmprestimoAtivo(selectedId)) {
+                throw new IllegalArgumentException(
+                        "O objeto possui um empréstimo ativo e deve permanecer indisponível."
+                );
             }
-        } catch (NumberFormatException ex) {
-            JOptionPane.showMessageDialog(this, "O valor deve ser um número válido.", "Erro", JOptionPane.ERROR_MESSAGE);
-            return;
-        }
-        
-        List<Objeto> objetos = objetoRepository.listar();
-        
-        if (selectedId == null) {
-            // Novo objeto
-            int novoId = objetoRepository.proximoId();
-            objetos.add(new Objeto(novoId, nome, categoria, descricao, disponivel, valor));
-        } else {
-            // Atualizar objeto existente
-            for (int i = 0; i < objetos.size(); i++) {
-                if (objetos.get(i).getId() == selectedId) {
-                    objetos.set(i, new Objeto(selectedId, nome, categoria, descricao, disponivel, valor));
-                    break;
+            List<Objeto> objetos = objetoRepository.listar();
+
+            if (selectedId == null) {
+                objetos.add(new Objeto(
+                        objetoRepository.proximoId(), nome, categoria, descricao, disponivel, valor
+                ));
+            } else {
+                for (int i = 0; i < objetos.size(); i++) {
+                    if (objetos.get(i).getId() == selectedId) {
+                        objetos.set(i, new Objeto(selectedId, nome, categoria, descricao, disponivel, valor));
+                        break;
+                    }
                 }
             }
+            objetoRepository.salvarTodos(objetos);
+            carregarDados();
+            JOptionPane.showMessageDialog(this, "Objeto salvo com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+        } catch (RuntimeException exception) {
+            showError(exception);
         }
-        
-        objetoRepository.salvarTodos(objetos);
-        carregarDados();
-        JOptionPane.showMessageDialog(this, "Objeto salvo com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
     }
     
     private void editarObjeto() {
@@ -259,11 +261,20 @@ public class ObjetosPanel extends JPanel {
         
         int confirm = JOptionPane.showConfirmDialog(this, "Tem certeza que deseja excluir este objeto?", "Confirmar Exclusão", JOptionPane.YES_NO_OPTION);
         if (confirm == JOptionPane.YES_OPTION) {
-            List<Objeto> objetos = objetoRepository.listar();
-            objetos.removeIf(o -> o.getId() == selectedId);
-            objetoRepository.salvarTodos(objetos);
-            carregarDados();
-            JOptionPane.showMessageDialog(this, "Objeto excluído com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+            try {
+                if (loanService.objetoPossuiHistorico(selectedId)) {
+                    throw new IllegalArgumentException(
+                            "Este objeto não pode ser excluído porque existe no histórico de empréstimos."
+                    );
+                }
+                List<Objeto> objetos = objetoRepository.listar();
+                objetos.removeIf(o -> o.getId() == selectedId);
+                objetoRepository.salvarTodos(objetos);
+                carregarDados();
+                JOptionPane.showMessageDialog(this, "Objeto excluído com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+            } catch (RuntimeException exception) {
+                showError(exception);
+            }
         }
     }
     
@@ -296,5 +307,9 @@ public class ObjetosPanel extends JPanel {
 
     private JButton createButton(String text, Color bg, Color hoverBg, Color fg) {
         return new ModernButton(text, bg, hoverBg, fg);
+    }
+
+    private void showError(RuntimeException exception) {
+        JOptionPane.showMessageDialog(this, exception.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
     }
 }

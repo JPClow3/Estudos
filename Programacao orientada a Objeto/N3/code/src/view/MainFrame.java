@@ -3,20 +3,17 @@ package view;
 import repository.AmigoRepository;
 import repository.EmprestimoRepository;
 import repository.ObjetoRepository;
+import service.LoanService;
 
 import javax.swing.*;
 import java.awt.*;
 
+@SuppressWarnings("this-escape")
 public class MainFrame extends JFrame {
-    private JTabbedPane tabbedPane;
-    private ObjetoRepository objetoRepository;
-    private AmigoRepository amigoRepository;
-    private EmprestimoRepository emprestimoRepository;
+    private static final long serialVersionUID = 1L;
 
     public MainFrame(ObjetoRepository objetoRepository, AmigoRepository amigoRepository, EmprestimoRepository emprestimoRepository) {
-        this.objetoRepository = objetoRepository;
-        this.amigoRepository = amigoRepository;
-        this.emprestimoRepository = emprestimoRepository;
+        installLookAndFeel();
         setTitle("EmprestaFacil - Controle de Empréstimos");
         setSize(900, 700);
         setMinimumSize(new Dimension(800, 600));
@@ -26,17 +23,22 @@ public class MainFrame extends JFrame {
         // Define a cor de fundo do content pane
         getContentPane().setBackground(StyleGuide.FUNDO_PRINCIPAL);
 
-        // Set System Look and Feel
-        try {
-            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        initUI();
+        initUI(objetoRepository, amigoRepository, emprestimoRepository);
     }
 
-    private void initUI() {
+    public static void installLookAndFeel() {
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (ReflectiveOperationException | UnsupportedLookAndFeelException exception) {
+            System.err.println("Não foi possível aplicar o tema do sistema: " + exception.getMessage());
+        }
+    }
+
+    private void initUI(
+            ObjetoRepository objetoRepository,
+            AmigoRepository amigoRepository,
+            EmprestimoRepository emprestimoRepository
+    ) {
         // Header Panel
         JPanel headerPanel = new JPanel(new BorderLayout());
         headerPanel.setBackground(StyleGuide.COR_PRIMARIA);
@@ -59,15 +61,18 @@ public class MainFrame extends JFrame {
         
         add(headerPanel, BorderLayout.NORTH);
 
-        tabbedPane = new JTabbedPane();
+        JTabbedPane tabbedPane = new JTabbedPane();
         tabbedPane.setFont(StyleGuide.FONTE_TEXTO);
         tabbedPane.setBackground(StyleGuide.FUNDO_PRINCIPAL);
         tabbedPane.setForeground(StyleGuide.TEXTO_PRINCIPAL);
 
         // Instancia os paineis
-        ObjetosPanel objetosPanel = new ObjetosPanel(objetoRepository);
-        AmigosPanel amigosPanel = new AmigosPanel(amigoRepository);
-        EmprestimosPanel emprestimosPanel = new EmprestimosPanel(emprestimoRepository, objetoRepository, amigoRepository);
+        LoanService loanService = new LoanService(emprestimoRepository, objetoRepository, amigoRepository);
+        ObjetosPanel objetosPanel = new ObjetosPanel(objetoRepository, loanService);
+        AmigosPanel amigosPanel = new AmigosPanel(amigoRepository, loanService);
+        EmprestimosPanel emprestimosPanel = new EmprestimosPanel(
+                loanService, objetoRepository, amigoRepository
+        );
 
         // Adiciona as abas
         tabbedPane.addTab("Objetos", objetosPanel);
@@ -79,9 +84,6 @@ public class MainFrame extends JFrame {
         contentWrapper.setBackground(StyleGuide.FUNDO_PRINCIPAL);
         contentWrapper.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         contentWrapper.add(tabbedPane, BorderLayout.CENTER);
-
-        // Adiciona o painel de abas ao frame
-        add(contentWrapper, BorderLayout.CENTER);
 
         // Atualiza os dados quando a aba é selecionada
         tabbedPane.addChangeListener(e -> {
@@ -95,7 +97,6 @@ public class MainFrame extends JFrame {
             }
         });
 
-        // Adiciona o painel de abas ao frame
-        add(tabbedPane, BorderLayout.CENTER);
+        add(contentWrapper, BorderLayout.CENTER);
     }
 }

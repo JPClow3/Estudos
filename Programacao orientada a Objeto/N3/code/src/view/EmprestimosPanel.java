@@ -4,8 +4,9 @@ import model.Amigo;
 import model.Emprestimo;
 import model.Objeto;
 import repository.AmigoRepository;
-import repository.EmprestimoRepository;
 import repository.ObjetoRepository;
+import service.LoanService;
+import service.ValidationUtils;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -16,9 +17,12 @@ import java.text.ParseException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.time.format.ResolverStyle;
 import java.util.List;
 
+@SuppressWarnings({"serial", "this-escape"})
 public class EmprestimosPanel extends JPanel {
+    private static final long serialVersionUID = 1L;
     private JComboBox<ComboItem> cbObjeto;
     private JComboBox<ComboItem> cbAmigo;
     private JFormattedTextField txtDataEmprestimo;
@@ -28,15 +32,16 @@ public class EmprestimosPanel extends JPanel {
     private JTable tabelaEmprestimos;
     private DefaultTableModel tableModel;
     
-    private EmprestimoRepository emprestimoRepository;
-    private ObjetoRepository objetoRepository;
-    private AmigoRepository amigoRepository;
+    private final LoanService loanService;
+    private final ObjetoRepository objetoRepository;
+    private final AmigoRepository amigoRepository;
     private Integer selectedId = null;
     
-    private static final DateTimeFormatter DATE_FORMAT = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+    private static final DateTimeFormatter DATE_FORMAT = DateTimeFormatter.ofPattern("dd/MM/uuuu")
+            .withResolverStyle(ResolverStyle.STRICT);
 
-    public EmprestimosPanel(EmprestimoRepository emprestimoRepository, ObjetoRepository objetoRepository, AmigoRepository amigoRepository) {
-        this.emprestimoRepository = emprestimoRepository;
+    public EmprestimosPanel(LoanService loanService, ObjetoRepository objetoRepository, AmigoRepository amigoRepository) {
+        this.loanService = loanService;
         this.objetoRepository = objetoRepository;
         this.amigoRepository = amigoRepository;
         
@@ -88,6 +93,12 @@ public class EmprestimosPanel extends JPanel {
         cbStatus.setFont(StyleGuide.FONTE_TEXTO);
         
         txtObservacoes = createTextField(20);
+        lblObjeto.setLabelFor(cbObjeto);
+        lblAmigo.setLabelFor(cbAmigo);
+        lblDataEmp.setLabelFor(txtDataEmprestimo);
+        lblDataPrev.setLabelFor(txtDataPrevista);
+        lblStatus.setLabelFor(cbStatus);
+        lblObservacoes.setLabelFor(txtObservacoes);
 
         // Row 0: Objeto / Amigo
         gbc.gridx = 0; gbc.gridy = 0; gbc.weightx = 0;
@@ -166,8 +177,7 @@ public class EmprestimosPanel extends JPanel {
         tabelaEmprestimos.setFont(StyleGuide.FONTE_TABELA);
         tabelaEmprestimos.setRowHeight(25);
         tabelaEmprestimos.getTableHeader().setFont(StyleGuide.FONTE_TEXTO);
-        tabelaEmprestimos.getTableHeader().setBackground(StyleGuide.COR_PRIMARIA);
-        tabelaEmprestimos.getTableHeader().setForeground(StyleGuide.BRANCO);
+        tabelaEmprestimos.getTableHeader().setDefaultRenderer(new ModernTableHeaderRenderer());
         tabelaEmprestimos.setDefaultRenderer(Object.class, new ModernTableRenderer());
         tabelaEmprestimos.setShowGrid(false);
         tabelaEmprestimos.setIntercellSpacing(new Dimension(0, 0));
@@ -187,6 +197,7 @@ public class EmprestimosPanel extends JPanel {
 
         JScrollPane scrollPane = new JScrollPane(tabelaEmprestimos);
         scrollPane.getViewport().setBackground(StyleGuide.FUNDO_PRINCIPAL);
+        scrollPane.setMinimumSize(new Dimension(0, 100));
         
         return scrollPane;
     }
@@ -197,38 +208,42 @@ public class EmprestimosPanel extends JPanel {
     }
     
     private void carregarComboBoxes() {
-        cbObjeto.removeAllItems();
-        cbAmigo.removeAllItems();
-        
-        for (Objeto obj : objetoRepository.listar()) {
-            cbObjeto.addItem(new ComboItem(obj.getId(), obj.getNome()));
-        }
-        
-        for (Amigo amigo : amigoRepository.listar()) {
-            cbAmigo.addItem(new ComboItem(amigo.getId(), amigo.getNome()));
+        try {
+            cbObjeto.removeAllItems();
+            cbAmigo.removeAllItems();
+            for (Objeto obj : objetoRepository.listar()) {
+                cbObjeto.addItem(new ComboItem(obj.getId(), obj.getNome()));
+            }
+            for (Amigo amigo : amigoRepository.listar()) {
+                cbAmigo.addItem(new ComboItem(amigo.getId(), amigo.getNome()));
+            }
+        } catch (RuntimeException exception) {
+            showError(exception);
         }
     }
     
     private void carregarDados() {
-        tableModel.setRowCount(0);
-        List<Emprestimo> emprestimos = emprestimoRepository.listar();
-        List<Objeto> objetos = objetoRepository.listar();
-        List<Amigo> amigos = amigoRepository.listar();
-        
-        for (Emprestimo emp : emprestimos) {
-            String nomeObjeto = objetos.stream().filter(o -> o.getId() == emp.getObjetoId()).map(Objeto::getNome).findFirst().orElse("Desconhecido");
-            String nomeAmigo = amigos.stream().filter(a -> a.getId() == emp.getAmigoId()).map(Amigo::getNome).findFirst().orElse("Desconhecido");
-            
-            tableModel.addRow(new Object[]{
-                emp.getId(),
-                nomeObjeto,
-                nomeAmigo,
-                emp.getDataEmprestimo().format(DATE_FORMAT),
-                emp.getDataPrevistaDevolucao().format(DATE_FORMAT),
-                emp.getStatus()
-            });
+        try {
+            tableModel.setRowCount(0);
+            List<Emprestimo> emprestimos = loanService.listarValidado();
+            List<Objeto> objetos = objetoRepository.listar();
+            List<Amigo> amigos = amigoRepository.listar();
+            for (Emprestimo emp : emprestimos) {
+                String nomeObjeto = objetos.stream().filter(o -> o.getId() == emp.getObjetoId()).map(Objeto::getNome).findFirst().orElseThrow();
+                String nomeAmigo = amigos.stream().filter(a -> a.getId() == emp.getAmigoId()).map(Amigo::getNome).findFirst().orElseThrow();
+                tableModel.addRow(new Object[]{
+                    emp.getId(),
+                    nomeObjeto,
+                    nomeAmigo,
+                    emp.getDataEmprestimo().format(DATE_FORMAT),
+                    emp.getDataPrevistaDevolucao().format(DATE_FORMAT),
+                    emp.getStatus()
+                });
+            }
+            limparFormulario();
+        } catch (RuntimeException exception) {
+            showError(exception);
         }
-        limparFormulario();
     }
     
     private void salvarEmprestimo() {
@@ -250,35 +265,27 @@ public class EmprestimosPanel extends JPanel {
             return;
         }
         
-        String status = (String) cbStatus.getSelectedItem();
-        String observacoes = txtObservacoes.getText().trim();
-        LocalDate dataDevolucao = "DEVOLVIDO".equals(status) ? LocalDate.now() : null;
-        
-        List<Emprestimo> emprestimos = emprestimoRepository.listar();
-        
-        if (selectedId == null) {
-            int novoId = emprestimoRepository.proximoId();
-            emprestimos.add(new Emprestimo(novoId, objetoSelecionado.getId(), amigoSelecionado.getId(), dataEmp, dataPrev, dataDevolucao, status, observacoes));
-        } else {
-            for (int i = 0; i < emprestimos.size(); i++) {
-                if (emprestimos.get(i).getId() == selectedId) {
-                    // Mantem a data de devolucao original se ja estiver devolvido e a edicao nao alterar o status,
-                    // Mas para simplificar, se esta atualizando para devolvido agora, seta a data.
-                    LocalDate oldDevolucao = emprestimos.get(i).getDataDevolucao();
-                    if ("DEVOLVIDO".equals(status) && oldDevolucao == null) {
-                        dataDevolucao = LocalDate.now();
-                    } else if ("DEVOLVIDO".equals(status)) {
-                        dataDevolucao = oldDevolucao;
-                    }
-                    emprestimos.set(i, new Emprestimo(selectedId, objetoSelecionado.getId(), amigoSelecionado.getId(), dataEmp, dataPrev, dataDevolucao, status, observacoes));
-                    break;
-                }
+        try {
+            String status = (String) cbStatus.getSelectedItem();
+            String observacoes = ValidationUtils.requireSafeText(
+                    "Observações", txtObservacoes.getText(), false
+            );
+            if (selectedId == null) {
+                loanService.criar(
+                        objetoSelecionado.getId(), amigoSelecionado.getId(), dataEmp, dataPrev, status, observacoes
+                );
+            } else {
+                loanService.atualizar(
+                        selectedId, objetoSelecionado.getId(), amigoSelecionado.getId(),
+                        dataEmp, dataPrev, status, observacoes
+                );
             }
+            carregarComboBoxes();
+            carregarDados();
+            JOptionPane.showMessageDialog(this, "Empréstimo salvo com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+        } catch (RuntimeException exception) {
+            showError(exception);
         }
-        
-        emprestimoRepository.salvarTodos(emprestimos);
-        carregarDados();
-        JOptionPane.showMessageDialog(this, "Empréstimo salvo com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
     }
     
     private void editarEmprestimo() {
@@ -289,7 +296,7 @@ public class EmprestimosPanel extends JPanel {
         
         carregarComboBoxes();
         
-        List<Emprestimo> emprestimos = emprestimoRepository.listar();
+        List<Emprestimo> emprestimos = loanService.listarValidado();
         for (Emprestimo emp : emprestimos) {
             if (emp.getId() == selectedId) {
                 // Set cbObjeto
@@ -324,11 +331,14 @@ public class EmprestimosPanel extends JPanel {
         
         int confirm = JOptionPane.showConfirmDialog(this, "Tem certeza que deseja excluir este empréstimo?", "Confirmar Exclusão", JOptionPane.YES_NO_OPTION);
         if (confirm == JOptionPane.YES_OPTION) {
-            List<Emprestimo> emprestimos = emprestimoRepository.listar();
-            emprestimos.removeIf(e -> e.getId() == selectedId);
-            emprestimoRepository.salvarTodos(emprestimos);
-            carregarDados();
-            JOptionPane.showMessageDialog(this, "Empréstimo excluído com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+            try {
+                loanService.excluir(selectedId);
+                carregarComboBoxes();
+                carregarDados();
+                JOptionPane.showMessageDialog(this, "Empréstimo excluído com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+            } catch (RuntimeException exception) {
+                showError(exception);
+            }
         }
     }
     
@@ -380,6 +390,10 @@ public class EmprestimosPanel extends JPanel {
 
     private JButton createButton(String text, Color bg, Color fg) {
         return new ModernButton(text, bg, bg.darker(), fg);
+    }
+
+    private void showError(RuntimeException exception) {
+        JOptionPane.showMessageDialog(this, exception.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
     }
     
     // Helper class para armazenar ID e Nome no JComboBox
